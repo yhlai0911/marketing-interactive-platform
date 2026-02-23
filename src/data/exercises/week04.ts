@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week04Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '以下關於遠期外匯合約的敘述，何者正確？',
+    options: [
+      { label: 'A', desc: '遠期匯率一定高於即期匯率' },
+      { label: 'B', desc: '遠期合約在簽約時就需要支付全額保證金' },
+      { label: 'C', desc: '遠期匯率是今天約定、未來交割的匯率' },
+      { label: 'D', desc: '遠期合約只能在到期日前取消，不能提前交割' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。遠期外匯合約是買賣雙方約定在未來某個日期，以今天議定的匯率交割一定金額外幣的合約。(A) 錯：遠期匯率可能高於或低於即期匯率，取決於兩國利率差。(B) 錯：通常不需要全額保證金。(D) 錯：某些遠期合約可以提前交割或展期。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '若 S(TWD/JPY) = 0.232，一年期遠期匯率 F = 0.2355，日圓相對於台幣為：',
+    options: [
+      { label: 'A', desc: '遠期折價 1.5%' },
+      { label: 'B', desc: '遠期溢價 1.5%' },
+      { label: 'C', desc: '遠期折價 2.0%' },
+      { label: 'D', desc: '遠期溢價 2.0%' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。遠期溢價 = (F-S)/S = (0.2355 - 0.232)/0.232 = 0.0035/0.232 ≈ +1.5%。F > S 代表日圓有遠期溢價——一年後換同樣多的日圓需要更多台幣。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '拋補利率平價（CIP）的核心主張是：',
+    options: [
+      { label: 'A', desc: '高利率國家的貨幣在未來一定會貶值' },
+      { label: 'B', desc: '不同貨幣的投資，經遠期合約避險後，報酬率應該相同' },
+      { label: 'C', desc: '兩國利率差異完全由通膨率差異決定' },
+      { label: 'D', desc: '遠期匯率是未來即期匯率的最佳預測' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。CIP 是無套利條件：在不同貨幣之間的投資，如果用遠期合約完全避險，其報酬率應該相同。(A) 描述的是國際費雪效果的預測。(C) 是費雪效果。(D) 是遠期匯率無偏假說。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '費雪效果（Fisher Effect）的公式為 (1+i) = (1+r)(1+π)，其中 r 代表：',
+    options: [
+      { label: 'A', desc: '名目利率' },
+      { label: 'B', desc: '通膨率' },
+      { label: 'C', desc: '實質利率' },
+      { label: 'D', desc: '匯率變動率' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。費雪效果將名目利率 i 分解為實質利率 r 和預期通膨率 π 的乘積關係。投資人要求的名目報酬，必須足以補償通膨對購買力的侵蝕。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '以下關於未拋補利率平價（UIP）的敘述，何者錯誤？',
+    options: [
+      { label: 'A', desc: 'UIP 使用預期的未來即期匯率，而非遠期匯率' },
+      { label: 'B', desc: 'UIP 在實證上經常不成立' },
+      { label: 'C', desc: 'UIP 不成立是利差交易能獲利的原因' },
+      { label: 'D', desc: 'UIP 是無風險的套利條件' },
+    ],
+    correctIndex: 3,
+    explanation: '答案：(D)。UIP 不是無風險的套利條件——那是 CIP 的角色。UIP 使用的是預期的未來匯率（不確定），投資人承擔匯率風險。CIP 才是無套利條件，因為使用遠期匯率（已鎖定、確定）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '如果台灣利率 2%，美國利率 4.5%，根據拋補利率平價，美元兌台幣的遠期匯率應：',
+    options: [
+      { label: 'A', desc: '高於即期匯率（美元有遠期溢價）' },
+      { label: 'B', desc: '低於即期匯率（美元有遠期折價）' },
+      { label: 'C', desc: '等於即期匯率' },
+      { label: 'D', desc: '無法判斷' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。F/S = (1 + id)/(1 + if) = 1.02/1.045 < 1，所以 F < S，美元有遠期折價。直覺：高利率國家（美國）的貨幣傾向有遠期折價——如果不打折，所有人都會跑去存美元。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '利差交易（Carry Trade）的基本策略是：',
+    options: [
+      { label: 'A', desc: '借入高利率貨幣，投資低利率貨幣' },
+      { label: 'B', desc: '借入低利率貨幣，投資高利率貨幣，且不避險' },
+      { label: 'C', desc: '同時買入和賣出同一種貨幣的遠期合約' },
+      { label: 'D', desc: '利用即期匯率和遠期匯率的差異進行套利' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。利差交易是借入低利率貨幣（如日圓），轉換為高利率貨幣（如澳幣）進行投資，且不使用遠期合約避險。它本質上是在「做空 UIP」——賭匯率不會按照利率差異來調整。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '在國際平價條件網中，以下哪一個條件在實證上最可靠（偏差最小）？',
+    options: [
+      { label: 'A', desc: '購買力平價（PPP）' },
+      { label: 'B', desc: '未拋補利率平價（UIP）' },
+      { label: 'C', desc: '拋補利率平價（CIP）' },
+      { label: 'D', desc: '國際費雪效果（IFE）' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。CIP 是無套利條件，由市場上的套利者持續執行套利交易來維持均衡，主要貨幣之間的偏差通常只有幾個基點。PPP 長期大致成立但短期偏差大；UIP 和 IFE 在短期經常不成立。',
+  },
+];

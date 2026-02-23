@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week02Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '關於全球外匯市場，以下敘述何者正確？',
+    options: [
+      { label: 'A', desc: '外匯市場有一個集中的交易所，類似紐約證券交易所' },
+      { label: 'B', desc: '外匯市場是場外交易 (OTC) 市場，24 小時運作' },
+      { label: 'C', desc: '外匯市場的交易時間僅限於紐約的營業時間' },
+      { label: 'D', desc: '外匯市場的日均交易量約為 7,500 億美元' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。外匯市場是全球最大的場外交易 (OTC) 市場，沒有集中交易所，透過銀行間電子網路進行，隨地球自轉 24 小時不間斷運作。日均交易量約 7.5 兆（非億）美元（BIS, 2022）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '在外匯市場的參與者層級中，以下哪類參與者通常享有最小的買賣價差？',
+    options: [
+      { label: 'A', desc: '觀光客在機場的換匯攤位' },
+      { label: 'B', desc: '大型商業銀行（造市者）之間的交易' },
+      { label: 'C', desc: '中小企業的外匯交易' },
+      { label: 'D', desc: '散戶投資人的線上交易' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。大型商業銀行（造市者，如 JPMorgan、Citi、HSBC）在銀行間市場交易時享有最小的價差，例如 EUR/USD 的銀行間 Spread 通常僅 0.01%--0.03%。層級越低（中小企業、散戶、觀光客），價差越大。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '台灣銀行牌告上顯示日圓即期賣出匯率為 0.2162。若你是珍途的 CFO，需要購買日圓支付貨款，你應該使用哪個匯率？',
+    options: [
+      { label: 'A', desc: '買入價（Bid）' },
+      { label: 'B', desc: '賣出價（Ask）' },
+      { label: 'C', desc: '買入價和賣出價的平均值' },
+      { label: 'D', desc: 'Google 上查到的匯率' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。銀行的「賣出價」(Ask) 是銀行賣出外幣給你的價格，也就是你購買外幣時適用的匯率。Ask 永遠高於 Bid，差額是銀行的利潤。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '如果 S(TWD/JPY) = 0.22，以下解讀何者正確？',
+    options: [
+      { label: 'A', desc: '1 台幣可以換 0.22 日圓' },
+      { label: 'B', desc: '1 日圓可以換 0.22 台幣' },
+      { label: 'C', desc: '0.22 日圓可以換 1 台幣' },
+      { label: 'D', desc: '這是台灣的間接報價' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。S(TWD/JPY) = 0.22 表示 1 單位 JPY 的價格以 TWD 計價為 0.22，即 1 日圓 = 0.22 台幣。對台灣人而言，這是直接報價（用本國貨幣表示外國貨幣的價格）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: 'S(TWD/JPY) = 0.22 和 S(JPY/TWD) = 4.545 之間的關係是：',
+    options: [
+      { label: 'A', desc: '兩者相同' },
+      { label: 'B', desc: '兩者互為倒數' },
+      { label: 'C', desc: '兩者相加等於 1' },
+      { label: 'D', desc: '沒有固定關係' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。直接報價和間接報價互為倒數：S(TWD/JPY) = 1 / S(JPY/TWD)。驗證：1 / 4.545 ≈ 0.22。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '影響外匯買賣價差大小的因素，以下何者不正確？',
+    options: [
+      { label: 'A', desc: '交易量越大的貨幣對，價差通常越小' },
+      { label: 'B', desc: '市場波動越大時，銀行傾向放大價差' },
+      { label: 'C', desc: '交易金額越大，通常可以談到較小的價差' },
+      { label: 'D', desc: '現鈔匯率的價差通常比即期（電匯）匯率小' },
+    ],
+    correctIndex: 3,
+    explanation: '答案：(D)。現鈔匯率的價差通常大於即期（電匯）匯率，因為現鈔包含了鈔票運輸、保管、保險等額外成本。例如同一家銀行 JPY 現鈔價差 3.83%，即期只有 1.11%。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '交叉匯率存在的主要原因是：',
+    options: [
+      { label: 'A', desc: '銀行不願意提供非美元貨幣之間的報價' },
+      { label: 'B', desc: '約 88% 的外匯交易涉及美元，許多貨幣對缺乏直接交易市場' },
+      { label: 'C', desc: '各國政府禁止非美元貨幣的直接交易' },
+      { label: 'D', desc: '交叉匯率可以幫助銀行賺更多手續費' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。由於美元在全球外匯交易中的主導地位（約 88% 的交易涉及美元），許多貨幣對（如 TWD/EUR）缺乏大量的直接交易。此時需要透過美元作為「橋樑」來推算兩種非美元貨幣之間的匯率，即交叉匯率。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '三角套利 (Triangular Arbitrage) 的獲利來源是：',
+    options: [
+      { label: 'A', desc: '匯率長期趨勢的預測' },
+      { label: 'B', desc: '市場上交叉匯率報價與理論計算值之間的偏差' },
+      { label: 'C', desc: '各國央行的利率差異' },
+      { label: 'D', desc: '買賣價差的長期縮小趨勢' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。三角套利是利用市場上某銀行的交叉匯率報價與透過美元計算出的理論值之間的偏差來獲利。但實務中需考慮 Bid-Ask Spread 的疊加。',
+  },
+];

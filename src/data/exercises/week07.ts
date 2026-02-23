@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week07Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '遠期外匯合約的主要特徵是：',
+    options: [
+      { label: 'A', desc: '在交易所集中交易，合約規格標準化' },
+      { label: 'B', desc: '由買賣雙方約定在未來以議定匯率交割' },
+      { label: 'C', desc: '買方可以選擇不履約' },
+      { label: 'D', desc: '需要繳納保證金' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。遠期外匯合約是買賣雙方約定在未來某個日期，以今天議定好的匯率交割外匯的合約。它在銀行 OTC 市場交易（非交易所），不需保證金，到期必須履行（不像選擇權可以選擇不履約）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '根據拋補利率平價（CIP），如果台灣利率高於日本利率，日圓的遠期匯率會：',
+    options: [
+      { label: 'A', desc: '等於即期匯率' },
+      { label: 'B', desc: '低於即期匯率（遠期折價）' },
+      { label: 'C', desc: '高於即期匯率（遠期升水）' },
+      { label: 'D', desc: '無法判斷' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。台灣利率 > 日本利率，根據 CIP：F = S0 × (1 + iTWD)/(1 + iJPY) > S0。分子大於分母，F > S0，日圓有遠期升水（Forward Premium），即遠期匯率高於即期匯率。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '以下何者不是外匯期貨與遠期合約的差異？',
+    options: [
+      { label: 'A', desc: '期貨在交易所交易，遠期在 OTC 市場' },
+      { label: 'B', desc: '期貨合約標準化，遠期可客製化' },
+      { label: 'C', desc: '期貨需繳保證金並每日結算' },
+      { label: 'D', desc: '期貨只能用來避險，遠期可以投機' },
+    ],
+    correctIndex: 3,
+    explanation: '答案：(D)。期貨和遠期都可以用來避險或投機，兩者在功能上都具有鎖定未來匯率的效果。差異在於交易方式：期貨在交易所交易（標準化、保證金、每日結算），遠期在 OTC 市場交易（客製化、無保證金）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '珍途半年後要把日圓換成台幣。為了避免日圓貶值的風險，應該買入：',
+    options: [
+      { label: 'A', desc: '日圓買權（JPY Call）' },
+      { label: 'B', desc: '日圓賣權（JPY Put）' },
+      { label: 'C', desc: '台幣賣權（TWD Put）' },
+      { label: 'D', desc: '台幣買權（TWD Call）' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。珍途需要在未來賣出日圓（換成台幣）。擔心日圓貶值（賣出時價格太低），所以買入日圓賣權（JPY Put），獲得以約定價格賣出日圓的權利。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '一張日圓賣權，履約價 K = 0.230 TWD/JPY，權利金 c = 0.004 TWD/JPY。到期時即期匯率 ST = 0.240。買方應該：',
+    options: [
+      { label: 'A', desc: '行使權利，以 0.230 賣出日圓' },
+      { label: 'B', desc: '不行使權利，以市場價 0.240 賣出日圓' },
+      { label: 'C', desc: '行使權利，因為可以避免權利金損失' },
+      { label: 'D', desc: '不行使也不在市場交易' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。ST = 0.240 > K = 0.230，市場匯率比履約價更好。行使權利反而會以較差的 0.230 賣出。因此應不行使權利，直接在市場上以 0.240 賣出。有效匯率 = 0.240 - 0.004 = 0.236 TWD/JPY（扣掉已支付的權利金）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '利率交換（IRS）的核心功能是：',
+    options: [
+      { label: 'A', desc: '將外幣貸款轉為本幣貸款' },
+      { label: 'B', desc: '將短期貸款轉為長期貸款' },
+      { label: 'C', desc: '將浮動利率轉為固定利率（或反之）' },
+      { label: 'D', desc: '消除匯率風險' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。利率交換最常見的形式是「固定利率 vs 浮動利率」的互換。例如珍途支付固定利率、收取 TORF（浮動利率），收到的 TORF 抵消貸款中的 TORF，淨效果是將浮動利率轉為固定利率。IRS 管理的是利率風險，不是匯率風險。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '以下關於遠期合約和選擇權的比較，何者正確？',
+    options: [
+      { label: 'A', desc: '遠期合約的成本比選擇權高' },
+      { label: 'B', desc: '選擇權鎖定匯率，遠期合約保留彈性' },
+      { label: 'C', desc: '遠期合約消除上下方風險，選擇權只消除下方風險' },
+      { label: 'D', desc: '選擇權到期時必須履行' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。遠期合約鎖定匯率，同時消除上方利益和下方風險（雙面劍）。選擇權只消除下方風險，保留上方利益（像保險）。遠期合約是「零現金成本」（但有機會成本），選擇權需支付權利金。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '「部分避險」（Partial Hedging）的含義是：',
+    options: [
+      { label: 'A', desc: '只用選擇權避險，不用遠期' },
+      { label: 'B', desc: '避險一部分曝險金額，其餘不避' },
+      { label: 'C', desc: '只在匯率下跌時避險' },
+      { label: 'D', desc: '避險期限短於曝險期限' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。部分避險是指企業只對一部分的匯率曝險進行避險，其餘部分承擔市場風險。例如珍途預計匯回 5,000 萬日圓，Jason 建議用遠期合約鎖定 2,500 萬，其餘 2,500 萬不避。這樣在日圓升值時仍能部分受益，在日圓貶值時也有部分保護。',
+  },
+];

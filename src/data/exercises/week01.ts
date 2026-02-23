@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week01Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '根據 Dunning 的折衷理論，以下何者不是企業國際化的主要動機？',
+    options: [
+      { label: 'A', desc: '市場尋求' },
+      { label: 'B', desc: '效率尋求' },
+      { label: 'C', desc: '稅務逃漏' },
+      { label: 'D', desc: '策略資產尋求' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。Dunning 的 OLI 折衷理論提出的四大動機為：市場尋求、資源尋求、效率尋求、策略資產尋求。稅務逃漏不是正當的國際化動機（雖然稅務規劃是國際財務管理的課題之一）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '根據 Uppsala 模型，企業國際化的典型路徑是：',
+    options: [
+      { label: 'A', desc: '直接進入最大的市場' },
+      { label: 'B', desc: '從文化和地理較近的市場逐步擴展' },
+      { label: 'C', desc: '同時進入所有目標市場' },
+      { label: 'D', desc: '先在國內完全飽和再考慮出海' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。Uppsala 模型 (Johanson & Vahlne, 1977) 認為企業的國際化是漸進的過程，通常從心理距離（psychic distance）較近的市場開始，隨著經驗和知識的累積逐步擴展到更遠的市場。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '在布列敦森林體系下，以下敘述何者正確？',
+    options: [
+      { label: 'A', desc: '所有貨幣直接與黃金掛鉤' },
+      { label: 'B', desc: '美元與黃金掛鉤，其他貨幣與美元掛鉤' },
+      { label: 'C', desc: '匯率完全由市場供需決定' },
+      { label: 'D', desc: '各國可以自由印鈔而不受限制' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。布列敦森林體系（1944--1971）的核心機制是：美元與黃金掛鉤（35 USD = 1 盎司黃金），其他貨幣以固定匯率與美元掛鉤（允許 ±1% 浮動）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '尼克森衝擊（Nixon Shock, 1971）指的是：',
+    options: [
+      { label: 'A', desc: '美國提高關稅' },
+      { label: 'B', desc: '美國宣布美元不再兌換黃金' },
+      { label: 'C', desc: '美國加入歐元區' },
+      { label: 'D', desc: '美國將匯率固定為 1 USD = 100 JPY' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。1971 年 8 月 15 日，美國總統尼克森宣布暫停美元兌換黃金，標誌著布列敦森林體系的終結，全球逐漸轉向浮動匯率制。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '以下哪個組織是在布列敦森林會議中成立的？',
+    options: [
+      { label: 'A', desc: '世界貿易組織（WTO）' },
+      { label: 'B', desc: '國際貨幣基金組織（IMF）' },
+      { label: 'C', desc: '亞洲開發銀行（ADB）' },
+      { label: 'D', desc: '歐洲中央銀行（ECB）' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。1944 年布列敦森林會議成立了兩個主要國際組織：國際貨幣基金組織 (IMF) 和世界銀行 (World Bank)。WTO 成立於 1995 年，ADB 成立於 1966 年，ECB 成立於 1998 年。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '珍途在台灣有五家分店，正考慮進軍日本市場。這主要屬於哪種國際化動機？',
+    options: [
+      { label: 'A', desc: '資源尋求' },
+      { label: 'B', desc: '市場尋求' },
+      { label: 'C', desc: '跟隨客戶' },
+      { label: 'D', desc: '效率尋求' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。珍途進軍日本的主要動機是開拓新市場——台灣手搖飲市場已趨飽和，而日本市場仍有巨大成長空間。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '如果匯率 S(TWD/USD) = 32.5，以下解讀何者正確？',
+    options: [
+      { label: 'A', desc: '1 台幣可兌換 32.5 美元' },
+      { label: 'B', desc: '1 美元可兌換 32.5 台幣' },
+      { label: 'C', desc: '32.5 美元可兌換 1 台幣' },
+      { label: 'D', desc: '匯率為間接報價' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。S(TWD/USD) = 32.5 表示 1 單位 USD 的價格以 TWD 計價為 32.5，即 1 美元 = 32.5 台幣。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '現代全球匯率制度的特徵是：',
+    options: [
+      { label: 'A', desc: '所有國家都採用固定匯率' },
+      { label: 'B', desc: '所有國家都採用浮動匯率' },
+      { label: 'C', desc: '不同國家採用不同的匯率制度' },
+      { label: 'D', desc: '匯率由 IMF 統一決定' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。現代匯率制度是多元並存的：美元、歐元、日圓等主要貨幣採浮動匯率；港幣採聯繫匯率制（與美元掛鉤）；歐元區 20 國共用單一貨幣。',
+  },
+];

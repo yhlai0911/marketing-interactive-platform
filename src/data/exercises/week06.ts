@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week06Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '「歐洲美元」（Eurodollar）指的是：',
+    options: [
+      { label: 'A', desc: '歐洲中央銀行發行的數位貨幣' },
+      { label: 'B', desc: '存放在美國以外銀行的美元存款' },
+      { label: 'C', desc: '歐元兌美元的匯率' },
+      { label: 'D', desc: '美國在歐洲發行的美元債券' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。歐洲美元（Eurodollar）是指存放在美國以外銀行體系中的美元存款。「歐洲」不是指地理位置，而是指「在貨幣發行國以外」。因此，存在東京、倫敦或新加坡銀行的美元存款都算歐洲美元。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '聯合貸款（Syndicated Loan）的主要特徵是：',
+    options: [
+      { label: 'A', desc: '由單一銀行提供，利率固定' },
+      { label: 'B', desc: '由多家銀行共同提供，由主辦銀行安排' },
+      { label: 'C', desc: '只能在歐洲市場進行' },
+      { label: 'D', desc: '不需要任何擔保' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。聯合貸款是由一家主辦銀行（Lead Arranger）組織多家銀行共同提供的大型貸款。主辦銀行承擔安排工作並收取承銷費，借款人只需與主辦銀行談判條件。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '一家台灣公司在東京發行日圓計價的債券，這稱為：',
+    options: [
+      { label: 'A', desc: '揚基債券' },
+      { label: 'B', desc: '歐洲日圓債券' },
+      { label: 'C', desc: '武士債券' },
+      { label: 'D', desc: '熊貓債券' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。在日本發行的外國債券稱為武士債券（Samurai Bond）。關鍵在於：(1) 發行人是外國公司、(2) 在日本市場發行、(3) 以日圓計價。暱稱與發行地的文化象徵有關，與發行人國籍無關。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '以下何者是歐洲債券（Eurobond）的特徵？',
+    options: [
+      { label: 'A', desc: '必須在歐盟國家發行' },
+      { label: 'B', desc: '在貨幣發行國以外的市場發行' },
+      { label: 'C', desc: '必須以歐元計價' },
+      { label: 'D', desc: '法規約束比外國債券更嚴格' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。歐洲債券是在計價貨幣的發行國以外的市場發行的債券。例如，在倫敦發行的日圓債券就是歐洲日圓債券。歐洲債券的法規約束通常比外國債券更少，不限於歐盟國家，也不限於歐元計價。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '外幣借款的「有效成本」（Effective Cost）考慮的是：',
+    options: [
+      { label: 'A', desc: '只考慮名目利率' },
+      { label: 'B', desc: '名目利率加上手續費' },
+      { label: 'C', desc: '名目利率加上預期匯率變動' },
+      { label: 'D', desc: '名目利率減去通貨膨脹率' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。外幣借款的有效成本公式為 r_eff = (1 + rf) × E(S1)/S0 - 1，其中 rf 是外幣名目利率，E(S1)/S0 是預期匯率變動倍數。這個公式將匯率的預期變動納入融資成本的計算。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '「自然避險」（Natural Hedge）的核心原理是：',
+    options: [
+      { label: 'A', desc: '購買外匯選擇權' },
+      { label: 'B', desc: '讓收入和支出使用同一種貨幣' },
+      { label: 'C', desc: '分散投資到多個國家' },
+      { label: 'D', desc: '固定匯率不會變動' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。自然避險是指企業透過讓收入和支出（包括債務）使用同一種貨幣，自動抵消匯率風險。例如珍途東京店的日圓營收直接還日圓貸款，不需要換匯，因此沒有匯率風險。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '如果國際費雪效果（IFE）完全成立，以下敘述何者正確？',
+    options: [
+      { label: 'A', desc: '借低利率貨幣一定比較便宜' },
+      { label: 'B', desc: '不同貨幣的有效融資成本大致相等' },
+      { label: 'C', desc: '匯率不會變動' },
+      { label: 'D', desc: '所有國家的利率趨向一致' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。IFE 指出利率差異反映了預期匯率變動。低利率貨幣預期會升值，升值造成的債務增加會抵消利率節省，使得以任何貨幣借款的有效成本大致相等。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '武士債券相比於銀行聯合貸款的主要劣勢是：',
+    options: [
+      { label: 'A', desc: '利率較高' },
+      { label: 'B', desc: '匯率風險較大' },
+      { label: 'C', desc: '發行時間長且門檻高' },
+      { label: 'D', desc: '不能以日圓計價' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。武士債券的發行通常需要 3--6 個月（包括信用評等取得、法規審核等），而且最低發行金額較高（通常 1 億日圓以上）。相比之下，銀行聯合貸款的審核速度更快（6--8 週），金額彈性也更大。',
+  },
+];

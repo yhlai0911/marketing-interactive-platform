@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+:root {
+  --background: #fafafa;
+  --foreground: #1a1a2e;
+  --zhen-primary: #1B3A5C;
+  --zhen-accent: #D4A843;
+  --zhen-story: #2D5016;
+  --zhen-danger: #C0392B;
+  --zhen-neutral: #7F8C8D;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-zhen-primary: var(--zhen-primary);
+  --color-zhen-accent: var(--zhen-accent);
+  --color-zhen-story: var(--zhen-story);
+  --color-zhen-danger: var(--zhen-danger);
+  --color-zhen-neutral: var(--zhen-neutral);
+  --font-sans: var(--font-noto-sans);
+  --font-serif: var(--font-noto-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* KaTeX 微調 */
+.katex-display {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* 品牌漸層 */
+.brand-gradient {
+  background: linear-gradient(135deg, var(--zhen-primary) 0%, #2a5a8c 100%);
+}
+
+.accent-gradient {
+  background: linear-gradient(135deg, var(--zhen-accent) 0%, #e8c468 100%);
+}

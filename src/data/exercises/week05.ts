@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week05Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '國際資本預算與國內資本預算相比，額外需要考慮的因素不包含：',
+    options: [
+      { label: 'A', desc: '匯率風險' },
+      { label: 'B', desc: '跨國稅務差異' },
+      { label: 'C', desc: '國內通膨率' },
+      { label: 'D', desc: '子公司與母公司的觀點差異' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。國內通膨率在國內資本預算中也需考慮（影響折現率和現金流預測），並非國際投資的額外挑戰。國際資本預算的額外複雜性來自匯率風險、雙重觀點、跨國稅務和政治風險。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '子公司觀點的 NPV 計算使用的是：',
+    options: [
+      { label: 'A', desc: '母國貨幣的現金流和母國折現率' },
+      { label: 'B', desc: '當地貨幣的現金流和當地折現率' },
+      { label: 'C', desc: '母國貨幣的現金流和當地折現率' },
+      { label: 'D', desc: '當地貨幣的現金流和母國折現率' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。子公司觀點把海外子公司當作獨立的當地企業來評估。所有現金流量和折現率都使用當地貨幣（此處為日圓）。好處是不需要預測匯率。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '在理論上（平價條件完全成立時），子公司觀點和母公司觀點的 NPV：',
+    options: [
+      { label: 'A', desc: '子公司 NPV 一定大於母公司 NPV' },
+      { label: 'B', desc: '兩者近似相等（等價）' },
+      { label: 'C', desc: '母公司 NPV 一定大於子公司 NPV' },
+      { label: 'D', desc: '兩者大小關係不確定' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。如果 IFE 和 CIP 都成立，匯率升值帶來的匯兌收益恰好被較高的母國折現率抵消，兩個觀點的 NPV 在理論上等價。只有當平價條件不成立（或加入稅務摩擦）時，兩者才會出現顯著差異。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '以下哪一種匯率預測方法最適合用於短期（1 年內）的匯率預測？',
+    options: [
+      { label: 'A', desc: '相對 PPP 法' },
+      { label: 'B', desc: '遠期匯率法' },
+      { label: 'C', desc: '國際費雪效果法' },
+      { label: 'D', desc: '技術分析法' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。短期內（1 年內）遠期匯率法最實用，因為市場流動性高、報價容易取得，且可直接用遠期合約避險。PPP 法短期偏差大，IFE 法的 UIP 短期常失敗，技術分析在外匯市場的有效性存疑。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '調整現值法（APV）的公式是：',
+    options: [
+      { label: 'A', desc: 'APV = NPV × (1 + 融資效果)' },
+      { label: 'B', desc: 'APV = 基礎 NPV + 融資附帶效果的現值' },
+      { label: 'C', desc: 'APV = NPV - 融資成本' },
+      { label: 'D', desc: 'APV = WACC 折現的 NPV + 稅盾' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。APV = Base NPV + PV(Financing Side Effects)。基礎 NPV 假設全部用自有資金（零負債），使用未槓桿權益成本折現。融資附帶效果包括利息稅盾、優惠貸款利差等。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: 'APV 的基礎 NPV 使用的折現率 ku 與 WACC 相比：',
+    options: [
+      { label: 'A', desc: 'ku 一定低於 WACC' },
+      { label: 'B', desc: 'ku 一定高於 WACC' },
+      { label: 'C', desc: 'ku 等於 WACC' },
+      { label: 'D', desc: '無法判斷大小關係' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。ku（未槓桿權益成本）高於 WACC（加權平均資金成本），因為 WACC 混合了較便宜的稅後債務成本，被拉低了。ku 反映的是純權益風險的報酬要求，不含債務的稅盾好處。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '日本對非居民企業匯出的股利課徵扣繳稅。以下敘述何者正確？',
+    options: [
+      { label: 'A', desc: '扣繳稅只影響子公司 NPV' },
+      { label: 'B', desc: '扣繳稅會降低母公司 NPV' },
+      { label: 'C', desc: '有租稅協定時，扣繳稅為零' },
+      { label: 'D', desc: '扣繳稅不影響投資決策' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。扣繳稅是匯回利潤時產生的成本，只影響母公司觀點的 NPV（子公司觀點不涉及資金匯回）。有租稅協定時，扣繳稅可降低但通常不為零（如日台協定優惠稅率為 10%，一般稅率為 20.42%）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '以下關於敏感度分析的敘述，何者錯誤？',
+    options: [
+      { label: 'A', desc: '敏感度分析是改變一個假設、觀察 NPV 變化的方法' },
+      { label: 'B', desc: '敏感度分析可以幫助識別最關鍵的風險因素' },
+      { label: 'C', desc: '敏感度分析能準確預測投資的實際報酬' },
+      { label: 'D', desc: '敏感度分析在國際投資中特別重要，因為不確定性更大' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。敏感度分析不能準確預測實際報酬——它只是讓你了解各個假設變動對結果的影響程度。它的價值在於識別「最敏感的變數」，讓決策者知道哪些風險最需要管理。',
+  },
+];

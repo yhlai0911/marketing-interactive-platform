@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week03Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '一價法則 (Law of One Price) 主張：',
+    options: [
+      { label: 'A', desc: '同一商品在不同國家的本地貨幣價格應相同' },
+      { label: 'B', desc: '同一商品在不同國家的價格，以同一貨幣表示時應相同' },
+      { label: 'C', desc: '所有商品在所有國家的價格都應該一樣' },
+      { label: 'D', desc: '匯率永遠等於兩國物價的比率' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。一價法則要求在無交易成本和貿易障礙的情況下，同一商品在不同國家的價格，以同一貨幣表示時應相同。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '以下哪個因素不會造成一價法則失敗？',
+    options: [
+      { label: 'A', desc: '國際運輸成本' },
+      { label: 'B', desc: '各國關稅與貿易障礙' },
+      { label: 'C', desc: '套利者在不同市場買賣商品' },
+      { label: 'D', desc: '各國不可貿易成本（如店租、人工）的差異' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。套利者的買賣行為恰恰是讓一價法則成立的機制——他們在低價市場買入、高價市場賣出，推動價格趨於一致。其他三個選項都是阻礙一價法則成立的摩擦因素。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '絕對購買力平價 (Absolute PPP) 的公式為 S = Pd / Pf。如果台灣的物價水準 Pd = 100，日本的物價水準 Pf = 800（以各自貨幣計），PPP 隱含匯率 S(TWD/JPY) 為：',
+    options: [
+      { label: 'A', desc: '8.00' },
+      { label: 'B', desc: '0.125' },
+      { label: 'C', desc: '800' },
+      { label: 'D', desc: '100' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。S(TWD/JPY) = Pd / Pf = 100 / 800 = 0.125。即 PPP 預測 1 日圓 = 0.125 台幣。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '如果大麥克在台灣賣 75 TWD，在美國賣 5.69 USD，PPP 隱含匯率 S(TWD/USD) = 75/5.69 ≈ 13.18，而實際匯率為 32.50。以大麥克衡量：',
+    options: [
+      { label: 'A', desc: '美元被低估' },
+      { label: 'B', desc: '美元被高估' },
+      { label: 'C', desc: '台幣被高估' },
+      { label: 'D', desc: 'PPP 完全成立' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。PPP 隱含匯率 13.18 遠低於實際匯率 32.50，代表實際上需要用比 PPP 預測更多的台幣才能換到 1 美元。以大麥克衡量，美元被高估（或台幣被低估）。偏差 = (32.50 - 13.18)/13.18 × 100 ≈ +147%。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '相對購買力平價 (Relative PPP) 主張：',
+    options: [
+      { label: 'A', desc: '匯率的水準應等於兩國物價水準的比率' },
+      { label: 'B', desc: '匯率的變動率應近似等於兩國通膨率的差異' },
+      { label: 'C', desc: '匯率不受通膨影響' },
+      { label: 'D', desc: '通膨高的國家貨幣一定會立刻升值' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。相對 PPP 不要求匯率在水準上等於物價比率（那是絕對 PPP），而是主張匯率的變動率近似等於兩國通膨率之差：ΔS/S ≈ πd - πf。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: 'Balassa-Samuelson 效果解釋了：',
+    options: [
+      { label: 'A', desc: '為什麼已開發國家的匯率波動較大' },
+      { label: 'B', desc: '為什麼已開發國家的物價水準系統性地偏高' },
+      { label: 'C', desc: '為什麼所有國家的 PPP 偏差都相同' },
+      { label: 'D', desc: '為什麼大麥克在全球價格一致' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。Balassa-Samuelson 效果的邏輯鏈：已開發國家可貿易部門生產力高 → 高工資 → 工資擴散到不可貿易部門 → 但服務業生產力未同步提升 → 服務價格偏高 → 整體物價水準偏高 → PPP 系統性偏差。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '根據 Rogoff (1996) 的研究，PPP 偏差的半衰期約為：',
+    options: [
+      { label: 'A', desc: '1--2 個月' },
+      { label: 'B', desc: '6--12 個月' },
+      { label: 'C', desc: '3--5 年' },
+      { label: 'D', desc: '20--30 年' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。Rogoff 的經典研究指出 PPP 偏差的半衰期約為 3--5 年，即一次 PPP 偏差需要 3--5 年才能回歸一半。這也解釋了為什麼 PPP 在短期內幾乎無法用來預測匯率。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: 'PPP 在短期內經常失敗的原因，以下何者不正確？',
+    options: [
+      { label: 'A', desc: '國際運輸成本形成價格差異的安全區間' },
+      { label: 'B', desc: '服務業等不可貿易品無法跨國套利' },
+      { label: 'C', desc: '外匯市場大部分交易是金融性質而非貿易性質' },
+      { label: 'D', desc: '各國消費者偏好完全相同' },
+    ],
+    correctIndex: 3,
+    explanation: '答案：(D)。各國消費者偏好不相同——這是 PPP 失敗的原因之一（消費籃結構差異）。(D) 的敘述本身就不正確，且如果消費者偏好相同，反而有助於 PPP 成立。',
+  },
+];

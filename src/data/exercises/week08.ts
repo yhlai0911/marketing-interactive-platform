@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week08Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '以下何者不是交易曝險的來源？',
+    options: [
+      { label: 'A', desc: '以日圓計價的應收帳款' },
+      { label: 'B', desc: '日圓計價的銀行貸款利息' },
+      { label: 'C', desc: '合併財報時日圓資產的換算差異' },
+      { label: 'D', desc: '以日圓簽訂的進口合約' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。合併財報時的匯率換算差異屬於換算曝險（Translation Exposure），不是交易曝險。交易曝險指的是已知或預期的外幣收付因匯率變動造成的實際現金流損益。(A)(B)(D) 都涉及實際的外幣現金流，屬於交易曝險。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '珍途的淨交易曝險為正數，代表：',
+    options: [
+      { label: 'A', desc: '珍途欠的日圓比收到的多' },
+      { label: 'B', desc: '珍途是日圓的淨多方，日圓貶值時會受損' },
+      { label: 'C', desc: '珍途不需要避險' },
+      { label: 'D', desc: '珍途已經完全避險' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。淨交易曝險為正表示外幣應收 > 外幣應付，即企業是該外幣的淨多方（net long）。淨多方在外幣貶值時受損，因為收到的外幣換回本國貨幣變少了。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '關於合約性曝險與預期性曝險，以下敘述何者正確？',
+    options: [
+      { label: 'A', desc: '預期性曝險比合約性曝險風險更低' },
+      { label: 'B', desc: '合約性曝險的金額是確定的' },
+      { label: 'C', desc: '預期性曝險不需要管理' },
+      { label: 'D', desc: '兩者的避險比率應該相同' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。合約性曝險已有合約約定（如租約、貸款、進口合約），金額是確定的。預期性曝險（如預期營收）的金額有不確定性，避險比率通常較低（30--60%），而合約性曝險可避 80--100%。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '避險效果（Hedging Effectiveness）用來衡量：',
+    options: [
+      { label: 'A', desc: '避險策略的獲利能力' },
+      { label: 'B', desc: '避險策略「擋掉」了多少匯率衝擊' },
+      { label: 'C', desc: '避險工具的市場流動性' },
+      { label: 'D', desc: '避險成本佔收入的比例' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。避險效果 HE = 1 - |實際收入 - 預期收入| / |不避險收入 - 預期收入|。HE 越接近 100%，表示避險策略越能讓實際收入接近預期，降低匯率衝擊的影響。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '「過度避險」（Over-hedging）最可能在以下哪種情況發生？',
+    options: [
+      { label: 'A', desc: '對合約性現金流避險 100%' },
+      { label: 'B', desc: '對預期性現金流避險 100%，但實際收入低於預期' },
+      { label: 'C', desc: '使用選擇權而非遠期合約避險' },
+      { label: 'D', desc: '避險比率為 50%' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。過度避險發生在避險金額超過實際曝險的情況。如果對預期收入 5,000 萬日圓簽了 100% 遠期合約，但最終只收到 3,000 萬，剩下 2,000 萬的合約就成了投機部位——必須到市場買入日圓交割，若日圓升值，會造成額外損失。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '全面避險派的核心論點是：',
+    options: [
+      { label: 'A', desc: '企業可以精準預測匯率走勢' },
+      { label: 'B', desc: '避險成本太高，不值得' },
+      { label: 'C', desc: '企業的核心能力不是預測匯率，應消除不確定性' },
+      { label: 'D', desc: '選擇權比遠期合約更適合企業避險' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。全面避險派認為企業應專注於核心業務（如賣珍奶），而非預測匯率。消除匯率不確定性可以方便做預算和財務規劃，也能防範極端匯率事件（尾端風險）。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '以下哪個指標是事後衡量的？',
+    options: [
+      { label: 'A', desc: '避險比率' },
+      { label: 'B', desc: '淨交易曝險' },
+      { label: 'C', desc: '避險效果' },
+      { label: 'D', desc: '遠期匯率' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。避險效果需要知道到期時的即期匯率 ST 才能計算，因此是事後指標。避險比率、淨曝險和遠期匯率都可以在事前確定。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '結果偏誤（Outcome Bias）指的是：',
+    options: [
+      { label: 'A', desc: '投資人總是偏好風險最低的方案' },
+      { label: 'B', desc: '人們傾向用結果來判斷決策品質' },
+      { label: 'C', desc: '匯率預測總是偏離實際值' },
+      { label: 'D', desc: '避險策略的事前評估與事後評估完全相同' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。結果偏誤（Baron & Hershey, 1988）指人們傾向以結果好壞來評價決策品質——賺錢就是好決策、虧錢就是壞決策。但在不確定環境中，好決策也可能有壞結果。評估決策應看事前資訊和邏輯。',
+  },
+];
