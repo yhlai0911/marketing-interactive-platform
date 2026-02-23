@@ -280,7 +280,7 @@ export default function ClassroomPage() {
               }}
               className="w-full border rounded-lg px-3 py-2 text-sm mb-4"
             >
-              {Array.from({ length: 9 }, (_, i) => i + 1).map((w) => (
+              {Array.from({ length: 16 }, (_, i) => i + 1).map((w) => (
                 <option key={w} value={w}>
                   Week {w}
                 </option>

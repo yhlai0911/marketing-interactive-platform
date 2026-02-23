@@ -176,30 +176,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 功能特色 */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-12" style={{ color: BRAND.primary }}>
-            平台特色
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feat, i) => (
-              <motion.div
-                key={feat.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 + 0.3 }}
-                className="text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow"
-              >
-                <feat.icon className="w-10 h-10 mx-auto mb-4" style={{ color: BRAND.accent }} />
-                <h3 className="font-bold mb-2">{feat.title}</h3>
-                <p className="text-sm text-gray-600">{feat.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 16 週課程地圖 */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
@@ -295,6 +271,30 @@ export default function HomePage() {
                 <p className="text-xs italic" style={{ color: CHARACTER_COLORS[char.id] || BRAND.neutral }}>
                   「{char.quote}」
                 </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 平台特色 */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-12" style={{ color: BRAND.primary }}>
+            平台特色
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feat, i) => (
+              <motion.div
+                key={feat.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 + 0.3 }}
+                className="text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow bg-white"
+              >
+                <feat.icon className="w-10 h-10 mx-auto mb-4" style={{ color: BRAND.accent }} />
+                <h3 className="font-bold mb-2">{feat.title}</h3>
+                <p className="text-sm text-gray-600">{feat.desc}</p>
               </motion.div>
             ))}
           </div>
