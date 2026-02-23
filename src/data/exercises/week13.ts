@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week13Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '關於跨國企業的現金管理組織架構，以下敘述何者最正確？',
+    options: [
+      { label: 'A', desc: '集中式現金管理意味著所有子公司的銀行帳戶都必須關閉，統一由母公司持有' },
+      { label: 'B', desc: '集中式現金管理將資金調度決策權集中於區域財務中心或母公司財務部，以提高資金使用效率並降低借貸成本' },
+      { label: 'C', desc: '分散式現金管理永遠優於集中式，因為各子公司最了解當地市場' },
+      { label: 'D', desc: '集中式與分散式的差異僅在於記帳方式不同，對實際資金流動沒有影響' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。集中式現金管理的核心是將資金調度決策權集中於母公司或區域財務中心（Regional Treasury Center），統一管理集團的現金部位、融資需求和外匯曝險。好處包括：透過現金池（Cash Pooling）集中閒置資金、以集團名義與銀行談判取得更優惠利率、統一避險策略避免重複避險。(A) 子公司仍保有當地帳戶；(C) 分散式不一定優於集中式；(D) 兩者對實際資金流動有重大差異。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '關於現金池（Cash Pooling）的兩種主要形式，以下何者正確？',
+    options: [
+      { label: 'A', desc: '實體現金池（Physical Pooling）只是在帳面上計算合併餘額，資金不會實際移動' },
+      { label: 'B', desc: '名義現金池（Notional Pooling）會將各子公司帳戶的資金實際匯集到主帳戶' },
+      { label: 'C', desc: '實體現金池會將子公司帳戶的資金實際移轉至主帳戶（零餘額帳戶機制），而名義現金池僅在計息時合併計算餘額，資金不實際移動' },
+      { label: 'D', desc: '兩種現金池完全相同，只是名稱不同' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。實體現金池（Physical / Zero-Balance Pooling）每日營業結束時，各子帳戶的餘額會實際匯入主帳戶，子帳戶餘額歸零，資金集中度最高。名義現金池（Notional Pooling）各子帳戶的資金不實際移動，但銀行在計算利息時以所有帳戶的淨餘額為基礎，有存款和借款的帳戶互相抵銷。(A) 和 (B) 剛好說反了，(D) 兩者機制完全不同。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '珍途集團四家子公司每月集團內部應付帳款：不進行淨額結算（Netting）時，總交易額 5,000 萬台幣（12 筆）。經多邊淨額結算後，淨交易額降為 1,200 萬台幣（3 筆）。交易金額節省比例為：',
+    options: [
+      { label: 'A', desc: '24%' },
+      { label: 'B', desc: '60%' },
+      { label: 'C', desc: '76%' },
+      { label: 'D', desc: '90%' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。節省比例 = (總交易額 - 淨交易額) / 總交易額 = (5,000 - 1,200) / 5,000 = 3,800 / 5,000 = 76%。淨額結算將集團內部的實際資金流動量減少了 76%，大幅節省匯款手續費和外匯交易成本。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '常規交易原則（Arm\'s Length Principle）在移轉訂價中的核心意義是：',
+    options: [
+      { label: 'A', desc: '集團內部交易的價格可以由母公司自由決定，不受限制' },
+      { label: 'B', desc: '集團內部交易的定價應與獨立第三方之間在相同條件下的交易價格一致' },
+      { label: 'C', desc: '集團內部交易必須以成本價進行，不允許加成' },
+      { label: 'D', desc: '常規交易原則僅適用於有形商品交易，不適用於服務或無形資產' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。常規交易原則是 OECD《移轉訂價指南》的基石，要求關係企業之間的交易價格應與非關係企業（獨立第三方）在相同或類似條件下進行相同交易時的價格一致。(A) 母公司不能自由定價；(C) 允許合理加成（成本加成法是 OECD 認可的方法之一）；(D) 此原則適用於所有類型的交易，包括服務和無形資產。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '根據 OECD 移轉訂價指南，以下哪一項不是公認的移轉訂價方法？',
+    options: [
+      { label: 'A', desc: '可比較未受控價格法（Comparable Uncontrolled Price, CUP）' },
+      { label: 'B', desc: '成本加成法（Cost Plus Method）' },
+      { label: 'C', desc: '利潤分割法（Profit Split Method）' },
+      { label: 'D', desc: '管理層主觀定價法（Management Discretion Method）' },
+    ],
+    correctIndex: 3,
+    explanation: '答案：(D)。OECD 移轉訂價指南認可五種方法，分為傳統交易方法（CUP 法、成本加成法、再售價格法）和交易利潤方法（交易淨利潤法 TNMM、利潤分割法）。「管理層主觀定價法」不存在於任何稅務法規中，移轉訂價必須有客觀的經濟基礎，不能由管理層主觀決定。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '在國際貿易融資中，信用狀（Letter of Credit, L/C）涉及的主要當事人不包括以下哪一方？',
+    options: [
+      { label: 'A', desc: '開狀銀行（Issuing Bank）——買方的銀行，負責開立信用狀' },
+      { label: 'B', desc: '受益人（Beneficiary）——賣方，憑單據向銀行請款' },
+      { label: 'C', desc: '通知銀行（Advising Bank）——賣方所在地的銀行，負責通知信用狀到達' },
+      { label: 'D', desc: '中央銀行（Central Bank）——負責審核每一筆信用狀的合規性' },
+    ],
+    correctIndex: 3,
+    explanation: '答案：(D)。信用狀交易的主要當事人包括：申請人（買方/進口商）、開狀銀行（買方的銀行，承擔付款義務）、受益人（賣方/出口商）、通知銀行（賣方所在地的銀行，通知並驗證信用狀）。中央銀行不參與個別信用狀的審核或操作，其職能是制定貨幣政策和監管金融體系。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: '珍途的泰國子公司需要在三個月後支付 5,000 萬日圓的設備款。若預期日圓將在未來三個月升值，珍途應採取什麼提前與延後（Leading and Lagging）策略？',
+    options: [
+      { label: 'A', desc: '延後支付（Lag）——拖延付款，等日圓升值後再付' },
+      { label: 'B', desc: '提前支付（Lead）——立即支付，在日圓升值前鎖定較低的成本' },
+      { label: 'C', desc: '無需任何操作，因為 Leading and Lagging 只適用於集團內部交易' },
+      { label: 'D', desc: '同時提前收款和延後付款' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。若預期外幣將升值（未來需付出更多本幣才能買到同樣外幣），應付帳款應提前支付（Lead），趁外幣還「便宜」時先付掉；應收帳款則應延後收款（Lag），等外幣升值後再收。本題珍途需支付日圓且預期日圓升值，應提前支付以鎖定較低成本。(A) 延後支付會在日圓升值後才付，成本更高；(C) Leading and Lagging 也可用於外部交易。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '關於 OECD 的 BEPS（稅基侵蝕與利潤移轉）行動計畫和 CRS（共同申報準則），以下何者正確？',
+    options: [
+      { label: 'A', desc: 'BEPS 僅約束歐盟國家，亞太地區的企業不受影響' },
+      { label: 'B', desc: 'CRS 要求金融機構自動交換非居民帳戶的金融資訊，增強國際稅務透明度' },
+      { label: 'C', desc: 'BEPS 鼓勵企業透過移轉訂價將利潤移至低稅率國家' },
+      { label: 'D', desc: 'CRS 只適用於個人帳戶，公司帳戶不在申報範圍內' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。CRS（共同申報準則）是 OECD 推動的全球自動資訊交換機制，參與國的金融機構必須收集非居民帳戶持有人的金融資訊，並自動交換給帳戶持有人的稅務居住國，超過 100 個國家已加入。(A) BEPS 是全球性框架，包含亞太國家；(C) BEPS 的目的是防止利潤移轉，而非鼓勵；(D) CRS 涵蓋個人和實體（包括公司）帳戶。',
+  },
+];

@@ -1,0 +1,108 @@
+import type { QuizSegment } from '@/types';
+
+export const week14Exercises: QuizSegment[] = [
+  {
+    type: 'quiz',
+    title: '概念測驗 1',
+    question: '關於國際投資組合分散化（International Portfolio Diversification）的核心原理，以下敘述何者最正確？',
+    options: [
+      { label: 'A', desc: '國際分散化的目的是找到報酬率最高的單一市場，將資金全部投入' },
+      { label: 'B', desc: '跨國投資因各國股市相關性較低，可透過分散化降低投資組合的整體風險' },
+      { label: 'C', desc: '只要投資的國家數量夠多，投資組合的風險就可以完全消除' },
+      { label: 'D', desc: '國際分散化只適用於機構投資人，散戶因交易成本過高而無法受益' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。國際投資組合分散化建立在 Markowitz 的現代投資組合理論之上：當兩項資產的報酬率相關性低於 1 時，組合可降低風險。各國股市相關係數通常在 0.3--0.7 之間，遠低於同一國家內個股間的 0.6--0.9，因此跨國投資能更有效降低風險。(A) 分散化目的是分散風險而非集中投資；(C) 系統性風險無法消除；(D) ETF 和國際基金讓散戶也可低成本進行國際分散化。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 2',
+    question: '本國偏誤（Home Bias）是國際投資中的重要現象。以下哪項不是 Home Bias 的主要成因？',
+    options: [
+      { label: 'A', desc: '投資人對本國企業有更多資訊，對外國企業存在資訊不對稱' },
+      { label: 'B', desc: '跨國投資涉及較高的交易成本、稅負和法規障礙' },
+      { label: 'C', desc: '投資人受到行為偏誤影響，傾向投資熟悉的本國資產' },
+      { label: 'D', desc: '本國股市的報酬率在統計上長期顯著高於其他所有國家' },
+    ],
+    correctIndex: 3,
+    explanation: '答案：(D)。Home Bias 的主要成因包括資訊不對稱、交易成本與法規障礙、匯率風險和行為偏誤（熟悉度偏誤、過度自信等）。(D) 並非成因——沒有證據顯示任何單一國家的股市長期顯著優於所有其他國家，不同時期的最佳表現市場經常輪替。如果本國股市確實永遠最好，那 Home Bias 就是理性選擇而非「偏誤」。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 3',
+    question: '關於交叉上市（Cross-Listing）的動機，以下何者最完整？',
+    options: [
+      { label: 'A', desc: '交叉上市的唯一目的是為了在外國交易所籌集更多資金' },
+      { label: 'B', desc: '交叉上市可以擴大投資人基礎、降低資本成本、產生約束效果（Bonding Effect），並提升品牌在國際市場的能見度' },
+      { label: 'C', desc: '交叉上市只適用於大型跨國企業，中小企業不需要考慮' },
+      { label: 'D', desc: '交叉上市的成本極低，幾乎所有企業都應該在多國上市' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。交叉上市的主要動機包括四個面向：(1) 擴大投資人基礎，當地投資人可用本幣交易；(2) 降低資本成本，流動性提高、風險分擔效果增強；(3) 約束效果（Bonding Effect），自願接受更嚴格的監管和揭露要求；(4) 品牌能見度，在國際金融中心上市提升知名度。(A) 籌資只是動機之一，且只有 Level III ADR 才能募資；(C) 中型企業也可受益；(D) 合規成本和維護費相當高。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 4',
+    question: '關於美國存託憑證（ADR）的三個等級，以下何者正確？',
+    options: [
+      { label: 'A', desc: 'Level I ADR 在紐約證券交易所（NYSE）掛牌交易，需完整遵守 SEC 註冊要求' },
+      { label: 'B', desc: 'Level II ADR 可以在美國交易所掛牌，但不能在美國進行公開募資' },
+      { label: 'C', desc: 'Level III ADR 只能在場外交易市場（OTC）買賣，適合想低調進入美國市場的企業' },
+      { label: 'D', desc: '三個等級的 ADR 在 SEC 的註冊要求和資訊揭露義務完全相同' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。ADR 三個等級的關鍵差異：Level I 在 OTC 場外交易，SEC 豁免，成本最低；Level II 在交易所上市，需完整 SEC 註冊但不能募資；Level III 在交易所上市且可公開募資，揭露要求最高。(A) Level I 在 OTC 交易而非 NYSE；(C) Level III 是最高等級，說反了；(D) 三個等級的要求差異很大。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 5',
+    question: '根據 ADR 的一價法則（Law of One Price），若珍途台灣原股價格為 TWD 160，ADR 轉換比率為 1:5（1 ADR = 5 股原股），即期匯率為 TWD 32/USD，則 ADR 理論價格為何？',
+    options: [
+      { label: 'A', desc: 'USD 5' },
+      { label: 'B', desc: 'USD 20' },
+      { label: 'C', desc: 'USD 25' },
+      { label: 'D', desc: 'USD 32' },
+    ],
+    correctIndex: 2,
+    explanation: '答案：(C)。ADR 理論價格 = (原股價格 x ratio) / 即期匯率 = (160 x 5) / 32 = 800 / 32 = USD 25。ADR 定價遵循一價法則，同一家公司的股票不論在哪裡交易，以同一貨幣計算的價格應該相同。ADR 投資人同時承擔原股價格變動和匯率變動兩種風險。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 6',
+    question: '約束假說（Bonding Hypothesis）的核心主張是什麼？',
+    options: [
+      { label: 'A', desc: '企業透過發行高收益債券來約束管理層的行為' },
+      { label: 'B', desc: '來自法規較寬鬆國家的企業自願到監管嚴格的市場上市，以此約束自身、降低代理成本，進而降低資本成本' },
+      { label: 'C', desc: '政府透過法規強制企業到海外上市，以增加外匯收入' },
+      { label: 'D', desc: '企業與承銷商簽訂的獨家代理合約，禁止在其他市場發行證券' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。約束假說（Coffee, 1999; Stulz, 1999）主張：來自公司治理較弱國家的企業，可透過自願到治理標準較高的市場（如美國）上市，承諾接受更嚴格的監管和揭露要求。效果包括：降低代理成本、增加投資人信心（交叉上市溢價）、降低資本成本。(A) 與債券無關；(C) 是企業自願行為，非政府強制；(D) 與承銷合約無關。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 7',
+    question: 'IPO（首次公開發行）中的綠鞋機制（Green Shoe Option / Over-Allotment Option）的功能是什麼？',
+    options: [
+      { label: 'A', desc: '允許發行公司在 IPO 後立即買回自家股票以提高股價' },
+      { label: 'B', desc: '允許承銷商在 IPO 後 30 天內額外買入最多 15% 的股份，用於穩定上市初期的股價' },
+      { label: 'C', desc: '允許散戶投資人在 IPO 價格的基礎上享有 15% 的折扣' },
+      { label: 'D', desc: '要求承銷商在股價下跌超過 15% 時強制停止交易' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。綠鞋機制是 IPO 承銷中的標準穩定機制：承銷商先超額配售 15% 股份（形成空頭部位），若股價下跌則在市場買入回補（產生護盤效果），若股價上漲則行使 Green Shoe Option 以 IPO 價格向公司額外購買 15% 股份回補。(A) 是承銷商的行為，不是公司買回；(C) 與散戶折扣無關；(D) 與停止交易無關。',
+  },
+  {
+    type: 'quiz',
+    title: '概念測驗 8',
+    question: '關於 Rule 144A ADR，以下何者正確？',
+    options: [
+      { label: 'A', desc: 'Rule 144A ADR 可以在 NYSE 或 NASDAQ 公開掛牌，向所有投資人銷售' },
+      { label: 'B', desc: 'Rule 144A ADR 是一種私募形式，僅向合格機構投資人（QIBs）發行，不需要 SEC 完整註冊' },
+      { label: 'C', desc: 'Rule 144A ADR 與 Level III ADR 完全相同，只是名稱不同' },
+      { label: 'D', desc: 'Rule 144A ADR 必須將財務報表轉換為 US GAAP 才能發行' },
+    ],
+    correctIndex: 1,
+    explanation: '答案：(B)。Rule 144A 允許外國發行人向合格機構投資人（QIBs，管理資產超過 1 億美元的機構）發行證券，無需 SEC 完整註冊。特點包括：大幅降低合規成本、僅限 QIBs 交易、在 PORTAL 系統而非公開交易所交易、可使用本國會計準則或 IFRS。(A) 不能公開掛牌；(C) 與 Level III 完全不同；(D) 不需要轉換 US GAAP。',
+  },
+];
