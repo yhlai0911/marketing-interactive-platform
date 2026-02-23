@@ -39,6 +39,8 @@ import { week11Teaching } from "@/data/teaching/week11";
 import { week12Teaching } from "@/data/teaching/week12";
 import { week13Teaching } from "@/data/teaching/week13";
 import { week14Teaching } from "@/data/teaching/week14";
+import { week15Teaching } from "@/data/teaching/week15";
+import { week16Teaching } from "@/data/teaching/week16";
 import { ALL_FORMULAS } from "@/data/formulas";
 import { ALL_EXERCISES } from "@/data/exercises";
 import type { LessonSegment, SegmentTeaching } from "@/types";
@@ -59,6 +61,8 @@ const TEACHING_DATA: Record<number, SegmentTeaching[]> = {
   12: week12Teaching,
   13: week13Teaching,
   14: week14Teaching,
+  15: week15Teaching,
+  16: week16Teaching,
 };
 
 function MissionSegmentView({

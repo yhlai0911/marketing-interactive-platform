@@ -12,6 +12,8 @@ import { week11 } from './week11';
 import { week12 } from './week12';
 import { week13 } from './week13';
 import { week14 } from './week14';
+import { week15 } from './week15';
+import { week16 } from './week16';
 import type { Lesson } from '@/types';
 
 export const lessons: Record<number, Lesson> = {
@@ -29,6 +31,8 @@ export const lessons: Record<number, Lesson> = {
   12: week12,
   13: week13,
   14: week14,
+  15: week15,
+  16: week16,
 };
 
 export function getLesson(week: number): Lesson | undefined {

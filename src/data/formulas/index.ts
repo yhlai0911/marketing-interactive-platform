@@ -12,6 +12,8 @@ export { week11Formulas } from "./week11";
 export { week12Formulas } from "./week12";
 export { week13Formulas } from "./week13";
 export { week14Formulas } from "./week14";
+export { week15Formulas } from "./week15";
+export { week16Formulas } from "./week16";
 
 import type { FormulaItem } from "@/components/visuals/FormulaQuickRef";
 import { week01Formulas } from "./week01";
@@ -28,6 +30,8 @@ import { week11Formulas } from "./week11";
 import { week12Formulas } from "./week12";
 import { week13Formulas } from "./week13";
 import { week14Formulas } from "./week14";
+import { week15Formulas } from "./week15";
+import { week16Formulas } from "./week16";
 
 export const ALL_FORMULAS: Record<number, { title: string; formulas: FormulaItem[] }> = {
   1: { title: "第 1 週公式速查", formulas: week01Formulas },
@@ -44,4 +48,6 @@ export const ALL_FORMULAS: Record<number, { title: string; formulas: FormulaItem
   12: { title: "第 12 週公式速查", formulas: week12Formulas },
   13: { title: "第 13 週公式速查", formulas: week13Formulas },
   14: { title: "第 14 週公式速查", formulas: week14Formulas },
+  15: { title: "第 15 週公式速查", formulas: week15Formulas },
+  16: { title: "第 16 週公式速查", formulas: week16Formulas },
 };

@@ -35,6 +35,17 @@ const CountryRiskMatrix = dynamic(() => import("./CountryRiskMatrix"), { ssr: fa
 const CRPCalculator = dynamic(() => import("./CRPCalculator"), { ssr: false });
 const RiskMitigationStrategy = dynamic(() => import("./RiskMitigationStrategy"), { ssr: false });
 const FiveGatesFlow = dynamic(() => import("./FiveGatesFlow"), { ssr: false });
+const NettingFlowDiagram = dynamic(() => import("./NettingFlowDiagram"), { ssr: false });
+const TransferPricingScenarios = dynamic(() => import("./TransferPricingScenarios"), { ssr: false });
+const TradeFinanceComparison = dynamic(() => import("./TradeFinanceComparison"), { ssr: false });
+const ADRLevelComparison = dynamic(() => import("./ADRLevelComparison"), { ssr: false });
+const ExchangeComparisonTable = dynamic(() => import("./ExchangeComparisonTable"), { ssr: false });
+const PortfolioDiversificationChart = dynamic(() => import("./PortfolioDiversificationChart"), { ssr: false });
+const RiskContagionFlow = dynamic(() => import("./RiskContagionFlow"), { ssr: false });
+const VaRCVaRCalculator = dynamic(() => import("./VaRCVaRCalculator"), { ssr: false });
+const StressTestDashboard = dynamic(() => import("./StressTestDashboard"), { ssr: false });
+const SixPillarsFramework = dynamic(() => import("./SixPillarsFramework"), { ssr: false });
+const IntegrationAnalysis = dynamic(() => import("./IntegrationAnalysis"), { ssr: false });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
@@ -71,4 +82,15 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   CRPCalculator,
   RiskMitigationStrategy,
   FiveGatesFlow,
+  NettingFlowDiagram,
+  TransferPricingScenarios,
+  TradeFinanceComparison,
+  ADRLevelComparison,
+  ExchangeComparisonTable,
+  PortfolioDiversificationChart,
+  RiskContagionFlow,
+  VaRCVaRCalculator,
+  StressTestDashboard,
+  SixPillarsFramework,
+  IntegrationAnalysis,
 };

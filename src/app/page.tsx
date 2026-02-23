@@ -20,8 +20,8 @@ const episodes = [
   { week: 12, title: "曼谷設廠——大投資決策", topics: ["FDI", "國際 WACC"], available: true },
   { week: 13, title: "全球金庫：錢怎麼搬？", topics: ["現金管理", "移轉訂價"], available: true },
   { week: 14, title: "上市夢：走向國際資本市場", topics: ["ADR/GDR", "國際投資組合"], available: true },
-  { week: 15, title: "風暴中的決策", topics: ["金融危機", "風險管理"], available: false },
-  { week: 16, title: "珍途的未來", topics: ["總複習", "整合報告"], available: false },
+  { week: 15, title: "風暴中的決策", topics: ["金融危機", "風險管理"], available: true },
+  { week: 16, title: "珍途的未來", topics: ["總複習", "整合報告"], available: true },
 ];
 
 const characters = [
