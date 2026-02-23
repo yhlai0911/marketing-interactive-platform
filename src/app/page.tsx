@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BookOpen, Lock, Sparkles, Users, Brain, Globe } from "lucide-react";
+import { BookOpen, Lock, Sparkles, Users, Brain, Globe, Download, FileText, Presentation, ClipboardList } from "lucide-react";
 import { BRAND, CHARACTER_COLORS } from "@/components/brand/BrandColors";
 
 const episodes = [
@@ -38,6 +39,109 @@ const features = [
   { icon: Globe, title: "動態視覺", desc: "互動圖表、公式動畫、場景轉場效果" },
   { icon: Users, title: "雙模式", desc: "自學模式 + 課堂模式，彈性適應教學情境" },
 ];
+
+const resourceTabs = [
+  {
+    id: "slides",
+    label: "投影片",
+    icon: Presentation,
+    files: Array.from({ length: 16 }, (_, i) => ({
+      week: i + 1,
+      href: `/pdfs/投影片/week${String(i + 1).padStart(2, "0")}-slides.pdf`,
+    })),
+  },
+  {
+    id: "textbook",
+    label: "教科書",
+    icon: BookOpen,
+    files: [{ week: 0, label: "完整教科書", href: "/pdfs/教科書/main.pdf" }],
+  },
+  {
+    id: "supplements",
+    label: "教學附件",
+    icon: FileText,
+    files: Array.from({ length: 16 }, (_, i) => ({
+      week: i + 1,
+      href: `/pdfs/教學附件/week${String(i + 1).padStart(2, "0")}-supplement.pdf`,
+    })),
+  },
+  {
+    id: "exercises",
+    label: "習題",
+    icon: ClipboardList,
+    files: Array.from({ length: 16 }, (_, i) => ({
+      week: i + 1,
+      href: `/pdfs/習題/week${String(i + 1).padStart(2, "0")}-exercises.pdf`,
+    })),
+  },
+];
+
+function ResourceDownloadSection() {
+  const [activeTab, setActiveTab] = useState("slides");
+  const currentTab = resourceTabs.find((t) => t.id === activeTab)!;
+
+  return (
+    <section className="py-16 px-4 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl font-bold text-center mb-2" style={{ color: BRAND.primary }}>
+          教學資源下載
+        </h2>
+        <p className="text-center text-gray-500 mb-8">課堂投影片、教科書、附件及習題</p>
+
+        {/* Tabs */}
+        <div className="flex justify-center gap-2 mb-8 flex-wrap">
+          {resourceTabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all"
+              style={
+                activeTab === tab.id
+                  ? { backgroundColor: BRAND.primary, color: "#fff" }
+                  : { backgroundColor: `${BRAND.primary}10`, color: BRAND.primary }
+              }
+            >
+              <tab.icon className="w-4 h-4" />
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* File grid */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25 }}
+          className={
+            currentTab.id === "textbook"
+              ? "flex justify-center"
+              : "grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3"
+          }
+        >
+          {currentTab.files.map((file) => (
+            <a
+              key={file.href}
+              href={file.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-transparent hover:shadow-lg transition-all hover:-translate-y-0.5 bg-gray-50 group"
+              style={{ borderColor: `${BRAND.accent}40` }}
+            >
+              <Download
+                className="w-5 h-5 transition-colors"
+                style={{ color: BRAND.accent }}
+              />
+              <span className="text-xs font-bold" style={{ color: BRAND.primary }}>
+                {"label" in file ? file.label : `Week ${file.week}`}
+              </span>
+            </a>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -161,6 +265,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 教學資源下載 */}
+      <ResourceDownloadSection />
 
       {/* 角色介紹 */}
       <section className="py-16 px-4 bg-white">
