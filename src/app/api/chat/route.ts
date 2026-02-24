@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
       const episodes = loadEpisodes();
       const episode = episodes.find((e) => e.week === week);
       if (episode) {
-        weekContext = `第 ${week} 週：${episode.title}\n主題：${episode.ifm_topics.join("、")}\n故事：${episode.story_summary}\n重點：${episode.key_concepts.join("、")}`;
+        weekContext = `第 ${week} 週：${episode.title}\n主題：${episode.marketing_topics.join("、")}\n故事：${episode.story_summary}\n重點：${episode.key_concepts.join("、")}`;
       }
 
       const terms = loadGlossary(week);

@@ -17,7 +17,7 @@ export function loadEpisodes(): Episode[] {
 export function loadCharacters(): Character[] {
   const data = loadYaml<{ characters: any[] }>('characters.yaml');
   return data.characters.map(c => ({
-    id: c.id === 'professor_chen' ? 'profchen' : c.id,
+    id: c.id === 'prof_lin' ? 'profLin' : c.id,
     name_zh: c.name_zh,
     name_en: c.name_en,
     role: c.role,
@@ -31,11 +31,17 @@ export function loadCharacters(): Character[] {
 }
 
 export function loadGlossary(week?: number): GlossaryTerm[] {
-  const data = loadYaml<{ glossary: GlossaryTerm[] }>('glossary.yaml');
+  const data = loadYaml<{ terms: { zh: string; en: string; definition: string; first_week: number }[] }>('glossary.yaml');
+  const terms: GlossaryTerm[] = (data.terms || []).map(t => ({
+    term_zh: t.zh,
+    term_en: t.en,
+    definition: t.definition,
+    first_week: t.first_week,
+  }));
   if (week !== undefined) {
-    return data.glossary.filter(t => t.first_week <= week);
+    return terms.filter(t => t.first_week <= week);
   }
-  return data.glossary;
+  return terms;
 }
 
 export function loadMetadata(): Metadata {

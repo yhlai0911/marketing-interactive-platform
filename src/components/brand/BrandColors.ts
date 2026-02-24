@@ -9,20 +9,20 @@ export const BRAND = {
 
 // 角色專屬色
 export const CHARACTER_COLORS: Record<string, string> = {
-  linmei: "#D4A843",
-  profchen: "#1B3A5C",
-  jason: "#2C3E50",
-  yuki: "#E74C3C",
-  bingcheng: "#C0392B",
-  narrator: "#7F8C8D",
+  chen: "#2C3E50",       // 陳建宏 — 深沉穩重的創業家
+  profLin: "#1B3A5C",    // 林教授 — 學者藍
+  xiaoYa: "#D4A843",     // 小雅 — 活力琥珀金
+  laoLi: "#34495E",      // 老李 — 資深穩重灰藍
+  wantai: "#C0392B",     // 萬泰金控 — 競爭紅
+  narrator: "#7F8C8D",   // 旁白
 };
 
 // 角色中文名
 export const CHARACTER_NAMES: Record<string, string> = {
-  linmei: "林美",
-  profchen: "陳教授",
-  jason: "方志豪",
-  yuki: "小雪",
-  bingcheng: "冰城帝國",
+  chen: "陳建宏",
+  profLin: "林教授",
+  xiaoYa: "小雅",
+  laoLi: "老李",
+  wantai: "萬泰金控",
   narrator: "旁白",
 };

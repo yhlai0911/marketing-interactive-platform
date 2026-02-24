@@ -1,5 +1,8 @@
 // ─── 角色 ───────────────────────────────────────
-export type CharacterId = "linmei" | "profchen" | "jason" | "yuki" | "bingcheng" | "narrator";
+export type CharacterId =
+  | "chen" | "profLin" | "xiaoYa" | "laoLi" | "wantai" | "narrator"
+  // 舊角色 ID（國際財務管理 W07-16 暫時保留，待遷移後移除）
+  | "linmei" | "profchen" | "jason" | "yuki" | "bingcheng";
 
 export interface Character {
   id: CharacterId;
@@ -91,7 +94,7 @@ export interface Lesson {
 export interface Episode {
   week: number;
   title: string;
-  ifm_topics: string[];
+  marketing_topics: string[];
   task: string;
   cliffhanger: string | null;
   story_summary: string;
@@ -125,7 +128,7 @@ export type TeachingStep = LectureStep | CheckStep | VisualStep | DiscussTimerSt
 export interface LectureStep {
   type: 'lecture';
   text: string;           // 教授的講解文字（用 TTS 朗讀）
-  character: CharacterId; // 通常是 'profchen'
+  character: CharacterId; // 通常是 'profLin'
   note?: string;          // 可選：螢幕上額外顯示的重點筆記
 }
 

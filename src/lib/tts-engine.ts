@@ -15,31 +15,31 @@ function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise
 
 // Edge TTS 角色聲線映射
 const EDGE_VOICE_MAP: Record<string, { voice: string; rate?: string; pitch?: string }> = {
-  linmei:   { voice: 'zh-TW-HsiaoChenNeural' },
-  profchen: { voice: 'zh-TW-YunJheNeural' },
-  jason:    { voice: 'zh-TW-YunJheNeural', pitch: '-5Hz' },
-  yuki:     { voice: 'zh-TW-HsiaoChenNeural', pitch: '+5Hz' },
-  bingcheng:{ voice: 'zh-TW-YunJheNeural', rate: '+10.00%' },
+  chen:     { voice: 'zh-TW-YunJheNeural' },
+  profLin:  { voice: 'zh-TW-YunJheNeural', pitch: '-3Hz' },
+  xiaoYa:   { voice: 'zh-TW-HsiaoChenNeural' },
+  laoLi:    { voice: 'zh-TW-YunJheNeural', pitch: '-5Hz' },
+  wantai:   { voice: 'zh-TW-YunJheNeural', rate: '+10.00%' },
   narrator: { voice: 'zh-TW-HsiaoChenNeural', rate: '-10.00%' },
 };
 
 // Google TTS 角色聲線映射（繁中聲線為 cmn-TW，非 zh-TW）
 const GOOGLE_VOICE_MAP: Record<string, { name: string }> = {
-  linmei:   { name: 'cmn-TW-Wavenet-A' },   // 女聲
-  profchen: { name: 'cmn-TW-Wavenet-B' },   // 男聲
-  jason:    { name: 'cmn-TW-Wavenet-C' },   // 男聲
-  yuki:     { name: 'cmn-TW-Wavenet-A' },   // 女聲
-  bingcheng:{ name: 'cmn-TW-Wavenet-B' },   // 男聲
+  chen:     { name: 'cmn-TW-Wavenet-B' },   // 男聲：理性堅定的創業者
+  profLin:  { name: 'cmn-TW-Wavenet-B' },   // 男聲：沉穩溫和的教授
+  xiaoYa:   { name: 'cmn-TW-Wavenet-A' },   // 女聲：活潑自信的年輕女性
+  laoLi:    { name: 'cmn-TW-Wavenet-C' },   // 男聲：穩重的資深業務
+  wantai:   { name: 'cmn-TW-Wavenet-B' },   // 男聲：強勢的競爭者
   narrator: { name: 'cmn-TW-Wavenet-A' },   // 女聲
 };
 
 // OpenAI TTS 角色映射
 const OPENAI_VOICE_MAP: Record<string, { voice: string; instructions: string }> = {
-  linmei:   { voice: 'nova',  instructions: '用活潑自信的年輕女性口吻說繁體中文' },
-  profchen: { voice: 'onyx',  instructions: '用沉穩溫和的大學教授口吻說繁體中文' },
-  jason:    { voice: 'echo',  instructions: '用理性冷靜的財務專家口吻說繁體中文' },
-  yuki:     { voice: 'shimmer', instructions: '用精準注重細節的日本女性口吻說繁體中文' },
-  bingcheng:{ voice: 'fable', instructions: '用激進自信的商業競爭者口吻說繁體中文' },
+  chen:     { voice: 'echo',  instructions: '用理性堅定的年輕創業者口吻說繁體中文' },
+  profLin:  { voice: 'onyx',  instructions: '用沉穩溫和的大學教授口吻說繁體中文' },
+  xiaoYa:   { voice: 'nova',  instructions: '用活潑自信的年輕女性口吻說繁體中文' },
+  laoLi:    { voice: 'fable', instructions: '用穩重務實的資深業務主管口吻說繁體中文' },
+  wantai:   { voice: 'fable', instructions: '用強勢自信的商業競爭者口吻說繁體中文' },
   narrator: { voice: 'sage',  instructions: '用溫暖平穩的旁白口吻說繁體中文，語速稍慢' },
 };
 

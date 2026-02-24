@@ -188,7 +188,7 @@ export default function ClassroomTeacher({
 
   // ─── 音訊播放 ──────────────────────────────────
   const playAudio = useCallback(
-    async (_text: string, _character: CharacterId = "profchen", audioKey?: string) => {
+    async (_text: string, _character: CharacterId = "profLin", audioKey?: string) => {
       if (isMuted) return;
 
       // 停止先前的音訊
@@ -391,7 +391,7 @@ export default function ClassroomTeacher({
   useEffect(() => {
     if (phase === "asking_check" && currentStep?.type === "check") {
       const key = `s${segmentIndex}-check${checkIndexInSegment}-question`;
-      playAudio(currentStep.question, "profchen", key);
+      playAudio(currentStep.question, "profLin", key);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
@@ -415,7 +415,7 @@ export default function ClassroomTeacher({
         ? currentStep.onCorrect
         : currentStep.onWrong;
       const feedbackKey = `s${segmentIndex}-check${checkIndexInSegment}-${correct ? "correct" : "wrong"}`;
-      playAudio(feedbackAudioText, "profchen", feedbackKey);
+      playAudio(feedbackAudioText, "profLin", feedbackKey);
     },
     [currentStep, selectedOption, playAudio, segmentIndex, checkIndexInSegment]
   );
@@ -472,7 +472,7 @@ export default function ClassroomTeacher({
     >
       {/* 頂部：教授資訊 + 控制按鈕 */}
       <div className="flex items-center gap-3 mb-5">
-        <CharacterAvatar character="profchen" size="lg" />
+        <CharacterAvatar character="profLin" size="lg" />
         <div className="flex-1">
           <div className="flex items-center gap-2">
             <span className="font-bold text-gray-900">陳思遠教授</span>
@@ -697,7 +697,7 @@ export default function ClassroomTeacher({
                 className="flex items-start gap-3 mb-5 p-4 rounded-xl"
                 style={{ backgroundColor: `${BRAND.primary}06` }}
               >
-                <CharacterAvatar character="profchen" size="sm" />
+                <CharacterAvatar character="profLin" size="sm" />
                 <div className="flex-1">
                   <p className="text-gray-800 font-medium leading-relaxed">
                     {phase === "asking_check" ? questionDisplayed : currentStep.question}

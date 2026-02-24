@@ -2,27 +2,21 @@ import type { FormulaItem } from "@/components/visuals/FormulaQuickRef";
 
 export const week01Formulas: FormulaItem[] = [
   {
-    name: "匯率基本表示",
-    formula: "S(TWD/USD) = 32.5",
-    description: "表示 1 美元 = 32.5 台幣。斜線前是「計價貨幣」，斜線後是「被報價貨幣」。",
-    example: "S(TWD/JPY) = 0.22 表示 1 日圓 = 0.22 台幣",
+    name: "行銷組合 4P",
+    formula: "Product（產品）+ Price（定價）+ Place（通路）+ Promotion（推廣）",
+    description: "行銷組合的基本框架，回答四個核心問題：提供什麼？收多少錢？在哪裡買？如何讓人知道？延伸至 7P 再加 People（人員）、Process（流程）、Physical Evidence（實體環境）。",
+    example: "富誠 FinTech：Product = ETF 智能配置、Price = 低手續費、Place = App 數位通路、Promotion = 理財教育內容行銷",
   },
   {
-    name: "匯率變動影響",
-    formula: "新匯率 = S₀ × (1 - x%)",
-    description: "若外幣貶值 x%，新匯率 = 原匯率 × (1 - x%)。營收變化 = Q × P(外幣) × S₀ × x%，其中 Q = 銷售量，P = 外幣定價，S₀ = 原始匯率。",
-    example: "日圓貶值 10%：0.21 × 0.9 = 0.189",
+    name: "行銷 vs 推銷對比",
+    formula: "行銷：顧客需求 → 價值創造 → 長期關係｜推銷：現有商品 → 促銷手段 → 短期交易",
+    description: "行銷以買方（顧客）需求為出發點，推銷以賣方（商品）為出發點。Drucker 名言：「行銷的目的，是使推銷變得多餘。」AMA 定義的 CCDVTP：Create（創造）、Communicate（溝通）、Deliver（傳遞）、Value（價值）、Target（目標市場）、Profit（獲利）。",
+    example: "銀行業務員為衝業績推薦高風險保單給 65 歲客戶 = 推銷；先了解退休需求再推薦穩健商品 = 行銷",
   },
   {
-    name: "交叉匯率",
-    formula: "S(TWD/JPY) = {S(TWD/USD)}/{S(JPY/USD)}",
-    description: "透過第三貨幣（通常是美元）計算兩種貨幣之間的匯率。斜線中間的貨幣可以「約分」消掉。",
-    example: "S(TWD/USD) = 32.5, S(JPY/USD) = 150 → S(TWD/JPY) = 32.5/150 = 0.2167",
-  },
-  {
-    name: "市場規模預測（複合成長）",
-    formula: "FV = PV × (1 + g)ⁿ",
-    description: "其中 g = 年複合成長率，n = 年數。用於估算市場規模的未來值。",
-    example: "現在市場 100 億，年成長 8%，5 年後 = 100 × 1.08⁵ ≈ 147 億",
+    name: "覺察↔反思學習循環",
+    formula: "覺察（注意到行銷現象）↔ 反思（思考為什麼這樣設計）",
+    description: "本課程的學習哲學。覺察的第一步是「注意到」周遭的行銷現象（廣告設計、推播策略、定價方式等），然後透過反思理解背後的行銷邏輯，再帶著新視角回到日常生活中覺察更多現象。",
+    example: "注意到銀行 App 的推播通知設計 → 思考「為什麼這個時間點推送這個訊息？」→ 理解推播策略與消費者行為的關係",
   },
 ];

@@ -21,7 +21,7 @@ import type { FormulaItem } from "@/components/visuals/FormulaQuickRef";
 
 // ─── 建議問題（依段落類型動態生成）───────────────
 const SUGGESTIONS: Record<string, string[]> = {
-  story: ["這段故事跟國際財管有什麼關係？", "可以解釋故事裡提到的概念嗎？"],
+  story: ["這段故事跟行銷有什麼關係？", "可以解釋故事裡提到的概念嗎？"],
   theory: ["可以用更簡單的方式解釋嗎？", "可以給一個生活化的例子嗎？", "這個公式怎麼推導的？"],
   quiz: ["為什麼正確答案是那個？", "這題考的觀念是什麼？"],
   discuss: ["可以給我一些思考方向嗎？", "有哪些不同的觀點？"],
@@ -238,7 +238,7 @@ export default function LessonChatFAB({
         title="AI 助教"
       >
         <div className="relative p-1">
-          <CharacterAvatar character="profchen" size="md" />
+          <CharacterAvatar character="profLin" size="md" />
           {/* 未讀紅點 */}
           {hasUnread && (
             <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-white" />
@@ -273,7 +273,7 @@ export default function LessonChatFAB({
                 style={{ backgroundColor: BRAND.primary }}
               >
                 <div className="flex items-center gap-2 min-w-0">
-                  <CharacterAvatar character="profchen" size="sm" />
+                  <CharacterAvatar character="profLin" size="sm" />
                   <div className="text-white min-w-0">
                     <div className="text-sm font-bold">AI 助教</div>
                     <div className="text-xs text-white/70 truncate">
@@ -330,7 +330,7 @@ export default function LessonChatFAB({
                     className={`flex gap-2 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
                   >
                     {msg.role === "assistant" && (
-                      <CharacterAvatar character="profchen" size="sm" />
+                      <CharacterAvatar character="profLin" size="sm" />
                     )}
                     <div
                       className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm leading-relaxed ${

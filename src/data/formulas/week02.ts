@@ -2,25 +2,21 @@ import type { FormulaItem } from "@/components/visuals/FormulaQuickRef";
 
 export const week02Formulas: FormulaItem[] = [
   {
-    name: "直接報價與間接報價",
-    formula: "S(direct) = {1}/{S(indirect)}",
-    description: "直接報價與間接報價互為倒數。直接報價以本國貨幣表示一單位外幣的價格。",
-    example: "S(TWD/JPY) = 0.22 ↔ S(JPY/TWD) = 1/0.22 = 4.545",
+    name: "哈佛四層次價值框架",
+    formula: "功能（最基礎）→ 情感 → 改變生活 → 社會影響（最高）",
+    description: "由低到高四個層次：(1) 功能價值——解決什麼問題（14 種要素）；(2) 情感價值——帶來什麼感受（10 種要素）；(3) 改變生活——改變人生什麼面向（5 種要素）；(4) 社會影響——對社會的正面影響（1 種要素）。越高層越難模仿，是品牌護城河。",
+    example: "富誠 ETF 定期定額：功能 = 省時簡化、情感 = 減少焦慮、改變生活 = 養成理財習慣、社會影響 = 推動台灣金融素養",
   },
   {
-    name: "買賣價差百分比",
-    formula: "Spread% = {S(ask) - S(bid)}/{S(ask)} × 100",
-    description: "你要買外幣 → 用 Ask（付比較多）；你要賣外幣 → 用 Bid（收比較少）。Spread 越大，交易成本越高。",
-    example: "Bid = 0.219, Ask = 0.222 → Spread% = (0.222 - 0.219)/0.222 × 100 = 1.35%",
+    name: "Maslow 五層需求理論",
+    formula: "生理需求 → 安全需求 → 愛與歸屬 → 尊重需求 → 自我實現",
+    description: "Abraham Maslow 的需求層次理論，由低到高：(1) 生理——基本生存（薪轉帳戶）；(2) 安全——風險規避（定存、保險）；(3) 愛與歸屬——家人連結（家庭保險規劃）；(4) 尊重——社會地位（私人銀行 VIP）；(5) 自我實現——人生意義（公益信託）。",
+    example: "28 歲上班族「怕虧錢」→ 主要需求在第 2 層安全需求，行銷應強調「減少焦慮」而非「高報酬」",
   },
   {
-    name: "交叉匯率（透過美元中轉）",
-    formula: "S(TWD/EUR) = S(TWD/USD) × S(USD/EUR)",
-    description: "約分口訣：斜線中間的貨幣可以消掉。TWD/USD × USD/EUR = TWD/EUR。",
-  },
-  {
-    name: "含 Bid-Ask 的交叉匯率",
-    formula: "Cross Bid = Bid₁ × Bid₂ ; Cross Ask = Ask₁ × Ask₂",
-    description: "交叉後的 Spread 一定大於原本任一對的 Spread，因為兩次交易的成本會疊加。",
+    name: "價值設定三步驟",
+    formula: "價值需求 → 價值要素 → 價值陳述",
+    description: "行銷人員設定產品價值的三步驟流程：(1) 價值需求——消費者在四個層次上有什麼需求？(2) 價值要素——從 30 種要素中挑選最能對應需求的要素；(3) 價值陳述——用消費者聽得懂的話表達價值。先理解需求，再選要素，最後才寫文案。",
+    example: "手錶行銷：功能需求 → 省時要素 →「讓你完全掌握精準時間」；情感需求 → 懷舊、象徵價值要素 →「用時間紀念你的愛情」",
   },
 ];

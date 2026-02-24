@@ -35,11 +35,12 @@ import {
 } from "@/lib/chat-storage";
 
 const SUGGESTED_QUESTIONS = [
-  { week: 1, questions: ["什麼是國際化動機？", "金本位制度是怎麼運作的？", "珍途為什麼要出海？"] },
-  { week: 2, questions: ["什麼是交叉匯率？", "買賣價差代表什麼？", "即期匯率和遠期匯率有什麼不同？"] },
-  { week: 3, questions: ["什麼是購買力平價？", "大麥克指數怎麼用？", "PPP 在實務上有什麼限制？"] },
-  { week: 4, questions: ["利率平價是什麼？", "費雪效果如何影響匯率？", "套利是什麼意思？"] },
-  { week: 5, questions: ["NPV 怎麼算？", "APV 方法和 NPV 有什麼不同？", "如何預測匯率？"] },
+  { week: 1, questions: ["行銷和推銷有什麼不同？", "4P 組合是什麼？", "Kotler 怎麼定義行銷？"] },
+  { week: 2, questions: ["什麼是哈佛 4 層次價值框架？", "Maslow 需求層次怎麼用？", "價值設計三步驟是什麼？"] },
+  { week: 3, questions: ["SWOT 分析怎麼做？", "PEST 分析的四個面向是什麼？", "行銷策略規劃有哪六步驟？"] },
+  { week: 4, questions: ["STP 框架是什麼？", "市場區隔有哪四種維度？", "有效區隔的五條件是什麼？"] },
+  { week: 5, questions: ["目標市場評估有哪四個指標？", "五種 Targeting 類型各是什麼？", "聚焦和差異化策略怎麼選？"] },
+  { week: 6, questions: ["什麼是品牌定位？", "定位聲明公式有哪四個要素？", "三大定位陷阱是什麼？"] },
 ];
 
 export default function TutorPage() {
@@ -407,10 +408,10 @@ export default function TutorPage() {
                 <PanelLeftOpen className="w-4 h-4 text-gray-500" />
               )}
             </button>
-            <CharacterAvatar character="profchen" size="md" />
+            <CharacterAvatar character="profLin" size="md" />
             <div>
-              <h1 className="font-bold">陳思遠教授</h1>
-              <p className="text-xs text-gray-500">國際財務管理 AI 教師</p>
+              <h1 className="font-bold">林教授</h1>
+              <p className="text-xs text-gray-500">金融商品行銷 AI 教師</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -432,12 +433,12 @@ export default function TutorPage() {
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.length === 0 && (
             <div className="text-center py-12">
-              <CharacterAvatar character="profchen" size="lg" />
+              <CharacterAvatar character="profLin" size="lg" />
               <h2 className="text-xl font-bold mt-4 mb-2" style={{ color: BRAND.primary }}>
-                歡迎來到陳教授的辦公室
+                歡迎來到林教授的辦公室
               </h2>
               <p className="text-gray-500 mb-6">
-                有任何國際財務管理的問題，隨時問我！
+                有任何金融商品行銷的問題，隨時問我！
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {currentSuggestions.map((q) => (
@@ -462,7 +463,7 @@ export default function TutorPage() {
               className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
             >
               {msg.role === "assistant" && (
-                <CharacterAvatar character="profchen" size="sm" />
+                <CharacterAvatar character="profLin" size="sm" />
               )}
               <div className="max-w-[80%]">
                 {/* 附件預覽 */}
@@ -524,7 +525,7 @@ export default function TutorPage() {
           {isStreaming && (
             <div className="flex items-center gap-2 text-gray-400 text-sm">
               <Loader2 className="w-4 h-4 animate-spin" />
-              陳教授正在思考...
+              林教授正在思考...
             </div>
           )}
           <div ref={messagesEndRef} />

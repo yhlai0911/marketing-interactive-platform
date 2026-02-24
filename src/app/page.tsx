@@ -7,35 +7,35 @@ import { BookOpen, Lock, Sparkles, Users, Brain, Globe, Download, FileText, Pres
 import { BRAND, CHARACTER_COLORS } from "@/components/brand/BrandColors";
 
 const episodes = [
-  { week: 1, title: "夜市到世界：為什麼要出海？", topics: ["國際化動機", "國際貨幣體系"], available: true },
-  { week: 2, title: "第一桶金的匯率陷阱", topics: ["外匯市場結構", "交叉匯率"], available: true },
-  { week: 3, title: "大麥克能告訴我們什麼？", topics: ["購買力平價", "一價法則"], available: true },
-  { week: 4, title: "利率的秘密通道", topics: ["利率平價", "費雪效果"], available: true },
-  { week: 5, title: "東京首戰：開店要多少錢？", topics: ["國際資本預算", "匯率預測"], available: true },
-  { week: 6, title: "錢從哪裡來？", topics: ["國際融資管道", "資本市場"], available: true },
-  { week: 7, title: "保護我們的錢", topics: ["遠期合約", "期貨", "選擇權"], available: true },
-  { week: 8, title: "期中危機：日圓風暴", topics: ["交易曝險", "避險實務"], available: true },
-  { week: 9, title: "價格戰的真正戰場", topics: ["經濟曝險", "營運彈性"], available: true },
-  { week: 10, title: "會計的魔術", topics: ["換算曝險", "財報合併"], available: true },
-  { week: 11, title: "南進！東南亞的機會與陷阱", topics: ["國家風險", "新興市場"], available: true },
-  { week: 12, title: "曼谷設廠——大投資決策", topics: ["FDI", "國際 WACC"], available: true },
-  { week: 13, title: "全球金庫：錢怎麼搬？", topics: ["現金管理", "移轉訂價"], available: true },
-  { week: 14, title: "上市夢：走向國際資本市場", topics: ["ADR/GDR", "國際投資組合"], available: true },
-  { week: 15, title: "風暴中的決策", topics: ["金融危機", "風險管理"], available: true },
-  { week: 16, title: "珍途的未來", topics: ["總複習", "整合報告"], available: true },
+  { week: 1, title: "行銷的本質：不只是推銷", topics: ["Kotler 定義", "4P 組合"], available: true },
+  { week: 2, title: "創造價值：哈佛 4 層次框架", topics: ["Maslow 需求", "價值設計"], available: true },
+  { week: 3, title: "認識你的戰場：策略規劃流程", topics: ["SWOT 分析", "PEST 分析"], available: true },
+  { week: 4, title: "切開市場：市場區隔", topics: ["STP 框架", "四維度區隔"], available: true },
+  { week: 5, title: "選定目標：目標市場選擇", topics: ["Targeting", "聚焦 vs 差異化"], available: true },
+  { week: 6, title: "搶佔心智：品牌定位", topics: ["定位圖", "定位聲明"], available: true },
+  { week: 7, title: "數位消費者的旅程：AISAS", topics: ["AISAS 模型", "數位行銷"], available: false },
+  { week: 8, title: "走進客戶的世界：人物誌", topics: ["Persona", "用戶研究"], available: false },
+  { week: 9, title: "走進客戶的心：同理心地圖", topics: ["Empathy Map", "深度洞察"], available: false },
+  { week: 10, title: "痛點轉商機：價值主張畫布", topics: ["VPC", "價值配適"], available: false },
+  { week: 11, title: "設計商品：金融產品策略", topics: ["產品組合", "產品生命週期"], available: false },
+  { week: 12, title: "定價的藝術：金融商品定價", topics: ["定價策略", "心理定價"], available: false },
+  { week: 13, title: "觸達客戶：金融通路策略", topics: ["OMO", "通路設計"], available: false },
+  { week: 14, title: "讓人記住你：整合行銷傳播", topics: ["IMC", "品牌傳播"], available: false },
+  { week: 15, title: "打造體驗：金融服務顧客旅程", topics: ["顧客旅程", "服務設計"], available: false },
+  { week: 16, title: "整合行銷計畫：富誠的下一步", topics: ["行銷計畫書", "總複習"], available: false },
 ];
 
 const characters = [
-  { id: "linmei", name: "林美", role: "珍途 CEO", quote: "珍珠奶茶征服了台灣，下一步就是征服世界！" },
-  { id: "profchen", name: "陳思遠教授", role: "國際財務顧問", quote: "匯率就像海浪，你不能阻止它，但你可以學會衝浪。" },
-  { id: "jason", name: "方志豪", role: "珍途 CFO", quote: "在沒有看到數據之前，我不會簽任何一張支票。" },
-  { id: "yuki", name: "小雪", role: "旭日食品財務經理", quote: "在日本做生意，差一円都不行。" },
-  { id: "bingcheng", name: "冰城帝國", role: "競爭對手", quote: "一杯只要 10 塊人民幣！" },
+  { id: "chen", name: "陳建宏", role: "富誠 FinTech CEO", quote: "我們不推銷，我們教理財。讓每個人都能做出不後悔的理財決定。" },
+  { id: "profLin", name: "林教授", role: "行銷顧問", quote: "好的行銷不是說服，而是讓對的人找到對的產品。" },
+  { id: "xiaoYa", name: "小雅", role: "富誠 CMO", quote: "年輕人不是不想理財，是不想被推銷。我們用內容贏得信任。" },
+  { id: "laoLi", name: "老李", role: "業務總監", quote: "做了二十年保險，客戶心裡把你跟推銷員綁在一起，你就完了。" },
+  { id: "wantai", name: "萬泰金控", role: "競爭對手", quote: "我們有百年品牌和千萬客戶。小公司想跟我們搶市場？" },
 ];
 
 const features = [
   { icon: Sparkles, title: "AI 語音導讀", desc: "三層 TTS 備援引擎，為每位角色配備專屬聲線" },
-  { icon: Brain, title: "AI 陳教授", desc: "蘇格拉底式對話教學，隨時提問即時回答" },
+  { icon: Brain, title: "AI 林教授", desc: "蘇格拉底式對話教學，隨時提問即時回答" },
   { icon: Globe, title: "動態視覺", desc: "互動圖表、公式動畫、場景轉場效果" },
   { icon: Users, title: "雙模式", desc: "自學模式 + 課堂模式，彈性適應教學情境" },
 ];
@@ -154,15 +154,15 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-6xl mb-6 block">🧋</span>
+            <span className="text-6xl mb-6 block">💰</span>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              珍途的全球征途
+              理財，可以不一樣
             </h1>
             <p className="text-xl text-white/80 mb-2">
-              國際財務管理 PBL 互動式多媒體教學平台
+              金融商品行銷實務 PBL 互動式多媒體教學平台
             </p>
             <p className="text-lg text-white/60 mb-8">
-              從台北夜市到世界舞台 — 跟著珍珠奶茶品牌學國際金融
+              跟著富誠 FinTech 學行銷 — 用溫度改變金融
             </p>
             <Link
               href="/lesson/1"
@@ -182,7 +182,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-center mb-4" style={{ color: BRAND.primary }}>
             16 週課程地圖
           </h2>
-          <p className="text-center text-gray-500 mb-12">跟著珍途走過國際化的每一步</p>
+          <p className="text-center text-gray-500 mb-12">跟著富誠 FinTech 走過行銷的每一步</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {episodes.map((ep, i) => (
               <motion.div

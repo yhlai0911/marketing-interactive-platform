@@ -35,10 +35,10 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <head>
-        <title>珍途的全球征途 — 互動教學平台</title>
+        <title>理財，可以不一樣 — 互動教學平台</title>
         <meta
           name="description"
-          content="國際財務管理 PBL 互動式多媒體教學平台"
+          content="金融商品行銷實務 PBL 互動式多媒體教學平台"
         />
       </head>
       <body
@@ -50,9 +50,9 @@ export default function RootLayout({
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-2 group">
-                <span className="text-2xl">🧋</span>
+                <span className="text-2xl">💰</span>
                 <span className="font-bold text-lg tracking-wide group-hover:text-[var(--zhen-accent)] transition-colors">
-                  珍途互動教室
+                  富誠互動教室
                 </span>
               </Link>
 
@@ -89,7 +89,7 @@ export default function RootLayout({
 
         {/* 頁尾 */}
         <footer className="bg-gray-100 border-t py-6 text-center text-sm text-gray-500">
-          <p>珍途的全球征途 — 國際財務管理 PBL 互動教學平台 © 2026</p>
+          <p>理財，可以不一樣 — 金融商品行銷實務 PBL 互動教學平台 © 2026</p>
         </footer>
       </body>
     </html>

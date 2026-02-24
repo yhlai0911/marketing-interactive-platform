@@ -147,7 +147,7 @@ export default function TeachingNarrator({
       const res = await fetch("/api/tts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, character: "profchen" }),
+        body: JSON.stringify({ text, character: "profLin" }),
       });
 
       if (!res.ok) {
@@ -206,10 +206,10 @@ export default function TeachingNarrator({
     >
       {/* Header: Professor Chen is teaching */}
       <div className="flex items-center gap-3 mb-5">
-        <CharacterAvatar character="profchen" size="lg" />
+        <CharacterAvatar character="profLin" size="lg" />
         <div>
           <div className="flex items-center gap-2">
-            <span className="font-bold text-gray-900">陳思遠教授</span>
+            <span className="font-bold text-gray-900">林教授</span>
             <span
               className="text-xs px-2 py-0.5 rounded-full text-white"
               style={{ backgroundColor: BRAND.primary }}

@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 import type { LessonSegment } from '@/types';
 
-const TEACHING_SYSTEM_PROMPT = `你是陳思遠教授，正在一堂大學的「國際財務管理」課堂上即時授課。
+const TEACHING_SYSTEM_PROMPT = `你是陳思遠教授，正在一堂大學的「金融商品行銷」課堂上即時授課。
 
 你的身份背景：
 - 55歲，曾任花旗銀行台灣區外匯交易室主管，有20多年實務經驗
@@ -41,14 +41,14 @@ function segmentToTeachingPrompt(
       content += `角色對話：\n`;
       for (const d of segment.dialogues) {
         const name =
-          d.character === 'linmei' ? '林美' :
-          d.character === 'profchen' ? '陳教授' :
-          d.character === 'jason' ? 'Jason' :
-          d.character === 'yuki' ? 'Yuki' :
-          d.character === 'bingcheng' ? '冰城帝國' : '旁白';
+          d.character === 'chen' ? '陳建宏' :
+          d.character === 'profLin' ? '林教授' :
+          d.character === 'xiaoYa' ? '小雅' :
+          d.character === 'laoLi' ? '老李' :
+          d.character === 'wantai' ? '萬泰金控' : '旁白';
         content += `  ${name}：「${d.text}」\n`;
       }
-      content += `\n你的任務：用你自己的話帶領學生進入這個故事情境。不要逐字唸故事，而是像說書人一樣重新詮釋，解釋這段場景的意義，為什麼這些對話對理解國際財務管理很重要。可以補充你自己的經驗見解。`;
+      content += `\n你的任務：用你自己的話帶領學生進入這個故事情境。不要逐字唸故事，而是像說書人一樣重新詮釋，解釋這段場景的意義，為什麼這些對話對理解金融商品行銷很重要。可以補充你自己的經驗見解。`;
       break;
 
     case 'theory':

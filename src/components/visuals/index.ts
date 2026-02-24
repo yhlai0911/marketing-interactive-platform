@@ -47,6 +47,32 @@ const StressTestDashboard = dynamic(() => import("./StressTestDashboard"), { ssr
 const SixPillarsFramework = dynamic(() => import("./SixPillarsFramework"), { ssr: false });
 const IntegrationAnalysis = dynamic(() => import("./IntegrationAnalysis"), { ssr: false });
 
+// Week 01: 行銷的本質
+const CharacterIntro = dynamic(() => import("./CharacterIntro"), { ssr: false });
+const ThreeDefinitionsTable = dynamic(() => import("./ThreeDefinitionsTable"), { ssr: false });
+const FourPDiagram = dynamic(() => import("./FourPDiagram"), { ssr: false });
+const AwarenessReflectionCycle = dynamic(() => import("./AwarenessReflectionCycle"), { ssr: false });
+const MissionStatementTemplate = dynamic(() => import("./MissionStatementTemplate"), { ssr: false });
+
+// Week 02: 創造價值——哈佛4層次框架
+const CombStoryIllustration = dynamic(() => import("./CombStoryIllustration"), { ssr: false });
+const ValueDualSource = dynamic(() => import("./ValueDualSource"), { ssr: false });
+const MaslowPyramid = dynamic(() => import("./MaslowPyramid"), { ssr: false });
+const HarvardFourLevelsPyramid = dynamic(() => import("./HarvardFourLevelsPyramid"), { ssr: false });
+const FourLevelTemplate = dynamic(() => import("./FourLevelTemplate"), { ssr: false });
+
+// Week 05: 選定目標——目標市場選擇
+const TargetingEvalTable = dynamic(() => import("./TargetingEvalTable"), { ssr: false });
+const TargetingTypeMatrix = dynamic(() => import("./TargetingTypeMatrix"), { ssr: false });
+
+// Week 05/06 共用
+const MissionChecklist = dynamic(() => import("./MissionChecklist"), { ssr: false });
+
+// Week 06: 搶佔心智——品牌定位
+const STPTimeline = dynamic(() => import("./STPTimeline"), { ssr: false });
+const PerceptualMap = dynamic(() => import("./PerceptualMap"), { ssr: false });
+const PositioningTraps = dynamic(() => import("./PositioningTraps"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -93,4 +119,25 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   StressTestDashboard,
   SixPillarsFramework,
   IntegrationAnalysis,
+  // Week 01
+  CharacterIntro,
+  ThreeDefinitionsTable,
+  FourPDiagram,
+  AwarenessReflectionCycle,
+  MissionStatementTemplate,
+  // Week 02
+  CombStoryIllustration,
+  ValueDualSource,
+  MaslowPyramid,
+  HarvardFourLevelsPyramid,
+  FourLevelTemplate,
+  // Week 05
+  TargetingEvalTable,
+  TargetingTypeMatrix,
+  // Week 05/06 共用
+  MissionChecklist,
+  // Week 06
+  STPTimeline,
+  PerceptualMap,
+  PositioningTraps,
 };
