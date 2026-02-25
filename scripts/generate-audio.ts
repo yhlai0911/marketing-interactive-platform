@@ -17,12 +17,12 @@ import { join } from 'path';
 
 // Edge TTS 角色聲線映射（與 tts-engine.ts 保持一致）
 const VOICE_MAP: Record<string, { voice: string; rate?: string; pitch?: string }> = {
-  linmei: { voice: 'zh-TW-HsiaoChenNeural' },
-  profchen: { voice: 'zh-TW-YunJheNeural' },
-  jason: { voice: 'zh-TW-YunJheNeural', pitch: '-5Hz' },
-  yuki: { voice: 'zh-TW-HsiaoChenNeural', pitch: '+5Hz' },
-  bingcheng: { voice: 'zh-TW-YunJheNeural', rate: '+10.00%' },
-  narrator: { voice: 'zh-TW-HsiaoChenNeural', rate: '-10.00%' },
+  chen: { voice: 'zh-TW-YunJheNeural', pitch: '-5Hz' },        // 陳建宏（CEO）—理性堅定
+  profLin: { voice: 'zh-TW-YunJheNeural' },                    // 林教授（顧問）—沉穩溫和
+  xiaoYa: { voice: 'zh-TW-HsiaoChenNeural' },                  // 小雅（CMO）—活潑自信
+  laoLi: { voice: 'zh-TW-YunJheNeural', pitch: '-3Hz' },        // 老李（業務總監）—穩重資深
+  wantai: { voice: 'zh-TW-YunJheNeural', rate: '+10.00%' },    // 萬泰金控（競爭者）—強勢
+  narrator: { voice: 'zh-TW-HsiaoChenNeural', rate: '-10.00%' }, // 旁白
 };
 
 interface AudioEntry {
@@ -108,7 +108,7 @@ async function main() {
           key: `s${si}-step${ti}`,
           file: `s${si}-step${ti}.mp3`,
           text: step.text,
-          character: step.character || 'profchen',
+          character: step.character || 'profLin',
         });
       } else if (step.type === 'check') {
         // 提問文字
@@ -116,21 +116,21 @@ async function main() {
           key: `s${si}-check${checkCount}-question`,
           file: `s${si}-check${checkCount}-question.mp3`,
           text: step.question,
-          character: 'profchen',
+          character: 'profLin',
         });
         // 答對回饋
         entries.push({
           key: `s${si}-check${checkCount}-correct`,
           file: `s${si}-check${checkCount}-correct.mp3`,
           text: step.onCorrect,
-          character: 'profchen',
+          character: 'profLin',
         });
         // 答錯回饋
         entries.push({
           key: `s${si}-check${checkCount}-wrong`,
           file: `s${si}-check${checkCount}-wrong.mp3`,
           text: step.onWrong,
-          character: 'profchen',
+          character: 'profLin',
         });
         checkCount++;
       }
