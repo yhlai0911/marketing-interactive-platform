@@ -73,6 +73,10 @@ const STPTimeline = dynamic(() => import("./STPTimeline"), { ssr: false });
 const PerceptualMap = dynamic(() => import("./PerceptualMap"), { ssr: false });
 const PositioningTraps = dynamic(() => import("./PositioningTraps"), { ssr: false });
 
+// Week 07: 數位消費者的旅程——AISAS
+const AIDMAvsAISASComparison = dynamic(() => import("./AIDMAvsAISASComparison"), { ssr: false });
+const AISASCycleEngine = dynamic(() => import("./AISASCycleEngine"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -140,4 +144,7 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   STPTimeline,
   PerceptualMap,
   PositioningTraps,
+  // Week 07
+  AIDMAvsAISASComparison,
+  AISASCycleEngine,
 };

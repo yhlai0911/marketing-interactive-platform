@@ -22,7 +22,7 @@ const VOICE_MAP: Record<string, { voice: string; rate?: string; pitch?: string }
   xiaoYa: { voice: 'zh-TW-HsiaoChenNeural' },                  // 小雅（CMO）—活潑自信
   laoLi: { voice: 'zh-TW-YunJheNeural', pitch: '-3Hz' },        // 老李（業務總監）—穩重資深
   wantai: { voice: 'zh-TW-YunJheNeural', rate: '+10.00%' },    // 萬泰金控（競爭者）—強勢
-  narrator: { voice: 'zh-TW-HsiaoChenNeural', rate: '-10.00%' }, // 旁白
+  narrator: { voice: 'zh-TW-HsiaoChenNeural', rate: '-10%' }, // 旁白
 };
 
 interface AudioEntry {
