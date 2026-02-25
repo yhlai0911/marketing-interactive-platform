@@ -156,7 +156,7 @@ export default function HomePage() {
           >
             <span className="text-6xl mb-6 block">💰</span>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              理財，可以不一樣
+              行銷，可能跟你想的不一樣
             </h1>
             <p className="text-xl text-white/80 mb-2">
               金融商品行銷實務 PBL 互動式多媒體教學平台

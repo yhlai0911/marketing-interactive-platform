@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <head>
-        <title>理財，可以不一樣 — 互動教學平台</title>
+        <title>行銷，可能跟你想的不一樣 — 互動教學平台</title>
         <meta
           name="description"
           content="金融商品行銷實務 PBL 互動式多媒體教學平台"
@@ -89,7 +89,7 @@ export default function RootLayout({
 
         {/* 頁尾 */}
         <footer className="bg-gray-100 border-t py-6 text-center text-sm text-gray-500">
-          <p>理財，可以不一樣 — 金融商品行銷實務 PBL 互動教學平台 © 2026</p>
+          <p>行銷，可能跟你想的不一樣 — 金融商品行銷實務 PBL 互動教學平台 © 2026</p>
         </footer>
       </body>
     </html>
