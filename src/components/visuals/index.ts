@@ -77,6 +77,16 @@ const PositioningTraps = dynamic(() => import("./PositioningTraps"), { ssr: fals
 const AIDMAvsAISASComparison = dynamic(() => import("./AIDMAvsAISASComparison"), { ssr: false });
 const AISASCycleEngine = dynamic(() => import("./AISASCycleEngine"), { ssr: false });
 
+// Week 08: 走進客戶的世界——人物誌（Persona）
+const W08PersonaSixElements = dynamic(() => import("./W08PersonaSixElements"), { ssr: false });
+const W08ThreeDimensions = dynamic(() => import("./W08ThreeDimensions"), { ssr: false });
+const W08FourToolsProgression = dynamic(() => import("./W08FourToolsProgression"), { ssr: false });
+
+// Week 09: 走進客戶的心——同理心地圖（Empathy Map）
+const EmpathyMapSixPanel = dynamic(() => import("./EmpathyMapSixPanel"), { ssr: false });
+const EmpathyMapVsPersona = dynamic(() => import("./EmpathyMapVsPersona"), { ssr: false });
+const EmpathyToStrategy = dynamic(() => import("./EmpathyToStrategy"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -147,4 +157,12 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   // Week 07
   AIDMAvsAISASComparison,
   AISASCycleEngine,
+  // Week 08
+  W08PersonaSixElements,
+  W08ThreeDimensions,
+  W08FourToolsProgression,
+  // Week 09
+  EmpathyMapSixPanel,
+  EmpathyMapVsPersona,
+  EmpathyToStrategy,
 };

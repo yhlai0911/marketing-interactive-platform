@@ -26,3 +26,13 @@ export const CHARACTER_NAMES: Record<string, string> = {
   wantai: "萬泰金控",
   narrator: "旁白",
 };
+
+// 角色職稱（用於課堂模式顯示）
+export const CHARACTER_ROLES: Record<string, string> = {
+  chen: "CEO / 創辦人",
+  profLin: "行銷顧問",
+  xiaoYa: "CMO",
+  laoLi: "業務總監",
+  wantai: "競爭對手",
+  narrator: "",
+};

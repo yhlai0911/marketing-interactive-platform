@@ -291,7 +291,7 @@ export default function LessonPage() {
             className="mb-6 text-center text-sm py-2 rounded-lg"
             style={{ backgroundColor: `${BRAND.primary}08`, color: BRAND.primary }}
           >
-            課堂模式：陳教授互動教學 — 講解、提問、回饋
+            課堂模式：互動教學 — 多角色講解、提問、回饋
           </div>
         )}
 

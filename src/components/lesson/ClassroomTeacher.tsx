@@ -13,10 +13,72 @@ import {
   XCircle,
 } from "lucide-react";
 import CharacterAvatar from "@/components/brand/CharacterAvatar";
-import { BRAND } from "@/components/brand/BrandColors";
+import { BRAND, CHARACTER_NAMES, CHARACTER_ROLES, CHARACTER_COLORS } from "@/components/brand/BrandColors";
 import { VISUAL_COMPONENTS } from "@/components/visuals";
-import { CHARACTER_NAMES } from "@/components/brand/BrandColors";
-import type { SegmentTeaching, TeachingStep, CharacterId, DiscussTimerStep } from "@/types";
+import type { SegmentTeaching, TeachingStep, CharacterId } from "@/types";
+
+// ─── 角色輔助工具 ─────────────────────────────────
+/** 從 step 取得當前說話角色 */
+function getStepCharacter(step: TeachingStep): CharacterId {
+  if (step.type === "lecture") return step.character;
+  return "profLin";
+}
+
+/** 判斷角色的 badge 標籤（區分講解 vs 對話） */
+function getCharacterBadge(step: TeachingStep): { label: string; color: string } {
+  switch (step.type) {
+    case "check":
+      return { label: "隨堂提問", color: BRAND.accent };
+    case "discuss_timer":
+      return { label: "小組討論", color: BRAND.story };
+    case "visual":
+      return { label: "圖表展示", color: BRAND.story };
+    case "lecture": {
+      const ch = step.character;
+      if (ch === "profLin") return { label: "講解中", color: BRAND.primary };
+      if (ch === "narrator") return { label: "旁白", color: BRAND.neutral };
+      if (ch === "wantai") return { label: "對手發言", color: BRAND.danger };
+      // chen, xiaoYa, laoLi 等角色
+      return { label: "對話中", color: CHARACTER_COLORS[ch] || BRAND.primary };
+    }
+  }
+}
+
+/** 狀態列文字（底部，角色感知） */
+function getPhaseStatusText(
+  phase: StepPhase,
+  step: TeachingStep,
+  extra: {
+    isPlayingAudio: boolean;
+    questionTypingDone: boolean;
+    feedbackTypingDone: boolean;
+    discussTimeLeft: number;
+  },
+): string {
+  const charName = CHARACTER_NAMES[getStepCharacter(step)] ?? "林教授";
+  const isProf = getStepCharacter(step) === "profLin";
+
+  switch (phase) {
+    case "playing_lecture":
+      return isProf ? "教授正在講解..." : `${charName}正在發言...`;
+    case "lecture_done":
+      return extra.isPlayingAudio
+        ? "語音播放中..."
+        : isProf ? "講解完成" : `${charName}發言結束`;
+    case "showing_visual":
+      return "圖表展示";
+    case "asking_check":
+      return extra.questionTypingDone ? "等待回答" : "教授正在提問...";
+    case "showing_feedback":
+      return (extra.isPlayingAudio || !extra.feedbackTypingDone) ? "回饋中..." : "回饋完成";
+    case "discuss_countdown":
+      return extra.discussTimeLeft > 0 ? "小組討論中..." : "討論完成";
+    case "step_done":
+      return "本段完成";
+    default:
+      return "";
+  }
+}
 
 // ─── Props ───────────────────────────────────────
 interface ClassroomTeacherProps {
@@ -464,6 +526,12 @@ export default function ClassroomTeacher({
     return null;
   }
 
+  // ─── 角色資訊（每次 render 根據 currentStep 計算）────
+  const activeCharId = getStepCharacter(currentStep);
+  const activeCharName = CHARACTER_NAMES[activeCharId] ?? "林教授";
+  const activeCharRole = CHARACTER_ROLES[activeCharId] ?? "";
+  const activeBadge = getCharacterBadge(currentStep);
+
   // ─── 渲染 ──────────────────────────────────────
   return (
     <motion.div
@@ -473,13 +541,19 @@ export default function ClassroomTeacher({
     >
       {/* 頂部：角色資訊 + 控制按鈕 */}
       <div className="flex items-center gap-3 mb-5">
-        <CharacterAvatar character={currentStep.type === "lecture" ? currentStep.character : "profLin"} size="lg" />
+        <CharacterAvatar character={activeCharId} size="lg" />
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-gray-900">
-              {CHARACTER_NAMES[currentStep.type === "lecture" ? currentStep.character : "profLin"] ?? "林教授"}
+            <span className="font-bold text-gray-900">{activeCharName}</span>
+            {activeCharRole && (
+              <span className="text-xs text-gray-400">{activeCharRole}</span>
+            )}
+            <span
+              className="text-xs px-2 py-0.5 rounded-full text-white"
+              style={{ backgroundColor: activeBadge.color }}
+            >
+              {activeBadge.label}
             </span>
-            <StepBadge step={currentStep} />
           </div>
           <div className="flex items-center gap-2 mt-0.5">
             <p className="text-xs text-gray-400">
@@ -980,17 +1054,12 @@ export default function ClassroomTeacher({
           </motion.button>
         ) : (
           <div className="text-xs text-gray-400">
-            {phase === "playing_lecture" && "教授正在講解..."}
-            {phase === "lecture_done" && isPlayingAudio && "語音播放中..."}
-            {phase === "lecture_done" && !isPlayingAudio && "講解完成"}
-            {phase === "showing_visual" && "圖表展示"}
-            {phase === "asking_check" && !questionTypingDone && "教授正在提問..."}
-            {phase === "asking_check" && questionTypingDone && "等待回答"}
-            {phase === "showing_feedback" && (isPlayingAudio || !feedbackTypingDone) && "回饋中..."}
-            {phase === "showing_feedback" && !isPlayingAudio && feedbackTypingDone && "回饋完成"}
-            {phase === "discuss_countdown" && discussTimeLeft > 0 && "小組討論中..."}
-            {phase === "discuss_countdown" && discussTimeLeft <= 0 && "討論完成"}
-            {phase === "step_done" && "本段完成"}
+            {getPhaseStatusText(phase, currentStep, {
+              isPlayingAudio,
+              questionTypingDone,
+              feedbackTypingDone,
+              discussTimeLeft,
+            })}
           </div>
         )}
 
@@ -1031,34 +1100,7 @@ export default function ClassroomTeacher({
 
 // ─── 輔助元件 ────────────────────────────────────
 
-function StepBadge({ step }: { step: TeachingStep }) {
-  const label =
-    step.type === "lecture"
-      ? "講解中"
-      : step.type === "check"
-        ? "隨堂提問"
-        : step.type === "discuss_timer"
-          ? "小組討論"
-          : "圖表展示";
-
-  const color =
-    step.type === "lecture"
-      ? BRAND.primary
-      : step.type === "check"
-        ? BRAND.accent
-        : step.type === "discuss_timer"
-          ? BRAND.story
-          : BRAND.story;
-
-  return (
-    <span
-      className="text-xs px-2 py-0.5 rounded-full text-white"
-      style={{ backgroundColor: color }}
-    >
-      {label}
-    </span>
-  );
-}
+// StepBadge 已被 getCharacterBadge() 取代（inline 渲染於頂部列）
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function renderVisual(componentName: string, props?: Record<string, any>) {
