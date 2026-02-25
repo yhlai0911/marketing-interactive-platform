@@ -15,6 +15,7 @@ import {
 import CharacterAvatar from "@/components/brand/CharacterAvatar";
 import { BRAND } from "@/components/brand/BrandColors";
 import { VISUAL_COMPONENTS } from "@/components/visuals";
+import { CHARACTER_NAMES } from "@/components/brand/BrandColors";
 import type { SegmentTeaching, TeachingStep, CharacterId, DiscussTimerStep } from "@/types";
 
 // ─── Props ───────────────────────────────────────
@@ -470,12 +471,14 @@ export default function ClassroomTeacher({
       animate={{ opacity: 1, y: 0 }}
       className={currentStep.type === "visual" ? "max-w-5xl mx-auto" : "max-w-2xl mx-auto"}
     >
-      {/* 頂部：教授資訊 + 控制按鈕 */}
+      {/* 頂部：角色資訊 + 控制按鈕 */}
       <div className="flex items-center gap-3 mb-5">
-        <CharacterAvatar character="profLin" size="lg" />
+        <CharacterAvatar character={currentStep.type === "lecture" ? currentStep.character : "profLin"} size="lg" />
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-gray-900">陳思遠教授</span>
+            <span className="font-bold text-gray-900">
+              {CHARACTER_NAMES[currentStep.type === "lecture" ? currentStep.character : "profLin"] ?? "林教授"}
+            </span>
             <StepBadge step={currentStep} />
           </div>
           <div className="flex items-center gap-2 mt-0.5">

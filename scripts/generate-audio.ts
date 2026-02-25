@@ -17,12 +17,12 @@ import { join } from 'path';
 
 // Edge TTS 角色聲線映射（與 tts-engine.ts 保持一致）
 const VOICE_MAP: Record<string, { voice: string; rate?: string; pitch?: string }> = {
-  chen: { voice: 'zh-TW-YunJheNeural', pitch: '-5Hz' },        // 陳建宏（CEO）—理性堅定
-  profLin: { voice: 'zh-TW-YunJheNeural' },                    // 林教授（顧問）—沉穩溫和
-  xiaoYa: { voice: 'zh-TW-HsiaoChenNeural' },                  // 小雅（CMO）—活潑自信
-  laoLi: { voice: 'zh-TW-YunJheNeural', pitch: '-3Hz' },        // 老李（業務總監）—穩重資深
-  wantai: { voice: 'zh-TW-YunJheNeural', rate: '+10.00%' },    // 萬泰金控（競爭者）—強勢
-  narrator: { voice: 'zh-TW-HsiaoChenNeural', rate: '-10%' }, // 旁白
+  chen: { voice: 'zh-TW-YunJheNeural', rate: '+8%', pitch: '+3Hz' },   // 陳建宏（CEO）—年輕有衝勁，語速稍快、音調略高
+  profLin: { voice: 'zh-TW-YunJheNeural' },                            // 林教授（顧問）—沉穩溫和，基準男聲
+  xiaoYa: { voice: 'zh-TW-HsiaoChenNeural', rate: '+5%', pitch: '+2Hz' }, // 小雅（CMO）—活潑自信，語速稍快
+  laoLi: { voice: 'zh-TW-YunJheNeural', rate: '-15%', pitch: '-6Hz' }, // 老李（業務總監）—穩重資深，語速慢、音調低沉
+  wantai: { voice: 'zh-TW-YunJheNeural', rate: '+20%', pitch: '+5Hz' },// 萬泰金控（競爭者）—強勢急促
+  narrator: { voice: 'zh-TW-HsiaoYuNeural', rate: '-5%' },            // 旁白—第三聲線，柔和中性
 };
 
 interface AudioEntry {
