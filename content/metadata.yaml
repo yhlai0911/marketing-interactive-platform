@@ -1,0 +1,32 @@
+title: "金融商品行銷實務：理財，可以不一樣"
+subtitle: "一本以台灣金融市場為場景的 PBL 行銷教科書"
+edition: 第一版
+year: 2026
+semester: 上學期
+target_audience: 商管學院大學部
+class_size: 30
+hours_per_week: 3
+total_weeks: 16
+
+authors:
+  - name: 賴奕豪
+    affiliation: 大葉大學財務金融學系
+    title: 副教授
+    email: yhlai@dyu.edu.tw
+
+brand:
+  primary_color: "#1A3C5E"     # 深海藍（信任感、專業）
+  accent_color: "#C9A84C"      # 琥珀金（財富感、重點）
+  story_color: "#2A6B5A"       # 碧玉綠（穩健感、洞察）
+  danger_color: "#C0392B"      # 危機紅
+  neutral_color: "#7F8C8D"     # 中性灰
+
+pedagogy:
+  method: 劇情任務式 PBL
+  story_name: 富誠 FinTech
+  story_theme: 從傳統金融行銷到有溫度的FinTech品牌——讓理財，可以不一樣
+  gamification:
+    - 富誠幣 FuCheng Coins
+    - 行銷成就排行榜
+    - 隨機市場事件卡
+    - 角色扮演卡

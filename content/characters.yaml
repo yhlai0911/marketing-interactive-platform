@@ -1,0 +1,72 @@
+characters:
+  - id: chen
+    name_zh: 陳建宏
+    name_en: Chen Jianhong
+    role: 富誠 FinTech 創辦人 / CEO
+    age: 35
+    personality: 曾是銀行理財專員，對傳統金融行銷感到失望，相信行銷應有溫度，有時過於理想化
+    function: 學生認同對象，推動劇情主線
+    color: "#C9A84C"
+    quote: "「金融商品不是賣給你的——是幫你達到你要的生活的。」"
+    background: |
+      在大型銀行擔任理財專員六年，見過太多客戶「不是沒錢，是不懂」。
+      辭職創辦富誠 FinTech，取得金管會投資顧問事業牌照，
+      以數位投資顧問平台為核心，主打 ETF 智能配置、理財教育與保險代銷，
+      致力讓金融商品行銷有人味、有溫度——讓普通人也能信任並買到對的金融產品。
+
+  - id: prof_lin
+    name_zh: 林教授
+    name_en: Prof. Lin
+    role: 大葉大學財金系教授兼富誠顧問
+    age: 52
+    personality: 沉穩睿智，善用故事和比喻講解行銷理論，重視學生自我覺察
+    function: 理論知識的傳遞者，引導學生從實踐中反思
+    color: "#1A3C5E"
+    quote: "「行銷的本質，是讓對的人在對的時間遇見對的價值。」"
+    background: |
+      曾任職BBDO廣告公司多年，深諳品牌策略。
+      退休後到大葉大學財金系任教，以「覺察↔反思」哲學指導學生，
+      專注幫助學生建立行銷思維而非只學技術工具。
+      擔任富誠FinTech的策略顧問，協助翻轉台灣金融商品行銷的思維。
+
+  - id: xiaoYa
+    name_zh: 小雅
+    name_en: Xiao Ya Chen
+    role: 富誠數位行銷長 CMO
+    age: 27
+    personality: Z世代，精通IG/TikTok，把艱澀的理財知識做成爆紅內容，有時忽略法規與合規性
+    function: 帶入數位行銷、社群媒體、AISAS等現代行銷概念
+    color: "#2A6B5A"
+    quote: "「讓理財內容比偶像劇更好看——你看完之後還順便學到東西。」"
+    background: |
+      政大傳播系畢業後直接加入新創，擅長將複雜金融知識轉化為
+      Z世代可以理解的創意內容。曾讓富誠的ETF科普影片在TikTok破百萬觀看，
+      為台灣金融品牌的數位行銷樹立新標竿。
+
+  - id: laoLi
+    name_zh: 老李（李明德）
+    name_en: Li Mingde
+    role: 富誠業務發展總監
+    age: 45
+    personality: 傳統保險業出身，熟悉B2B合作與法人通路，有時對數位行銷持保守態度
+    function: 帶入B2B行銷、通路策略、金融商品合規與銷售流程
+    color: "#7F8C8D"
+    quote: "「客戶不是不想理財，他們只是不相信你。取得信任，才能談商品。」"
+    background: |
+      在大型壽險公司擔任業務主管20年，轉戰富誠後負責開拓
+      企業員工福利通路與合作銀行介紹。深刻理解台灣消費者對
+      金融機構信任度偏低的原因，致力以透明度和教育行銷重建信任。
+
+  - id: wantai
+    name_zh: 萬泰金控
+    name_en: Wantai Financial Group
+    role: 大型傳統金融集團（競爭對手）
+    age: null
+    personality: 資本雄厚、法規掌握深、以複雜條款和通路壟斷維持市場地位
+    function: 反派 / 競爭壓力來源，代表傳統金融機構的既得利益
+    color: "#C0392B"
+    quote: "「市場秩序需要有人維護，而維護者，當然是我們。」"
+    background: |
+      影射大型傳統金融集團（類似台灣富邦/國泰金控模式）。
+      擁有龐大的銀行、保險、證券子公司，看準FinTech崛起的威脅，
+      試圖以法規遊說、通路封鎖、低費率競爭等手段打壓富誠這類新創品牌。

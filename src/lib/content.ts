@@ -4,7 +4,11 @@ import yaml from 'js-yaml';
 import type { Episode, Character, GlossaryTerm, Metadata } from '@/types';
 
 function loadYaml<T>(filename: string): T {
-  const filePath = path.join(process.cwd(), '..', 'content', filename);
+  // 優先從 repo 內的 content/ 讀取（Zeabur 部署用）
+  // 其次從上層目錄的 content/ 讀取（本地開發用）
+  const inRepo = path.join(process.cwd(), 'content', filename);
+  const parent = path.join(process.cwd(), '..', 'content', filename);
+  const filePath = fs.existsSync(inRepo) ? inRepo : parent;
   const raw = fs.readFileSync(filePath, 'utf-8');
   return yaml.load(raw) as T;
 }

@@ -1,0 +1,270 @@
+# 金融商品行銷實務 — 術語表
+# first_week: 該術語首次出現的週次
+terms:
+  # Week 1: 行銷本質
+  - id: marketing
+    zh: 行銷
+    en: Marketing
+    definition: "透過創造、傳遞並與目標市場交換價值，以滿足顧客需求並達成組織目標的社會與管理過程（Kotler定義）"
+    first_week: 1
+
+  - id: promotion
+    zh: 促銷
+    en: Promotion
+    definition: "行銷組合4P中的其中一個P，僅是行銷的一部分，而非行銷的全部。常被錯誤等同於行銷。"
+    first_week: 1
+
+  - id: awareness_reflection
+    zh: 覺察↔反思
+    en: Awareness ↔ Reflection
+    definition: "本課程的學習哲學：先對現象產生覺察，再透過反思深化理解，循環往復，形成真正的洞見。"
+    first_week: 1
+
+  - id: value
+    zh: 價值
+    en: Value
+    definition: "顧客從產品或服務中所獲得的利益（解決問題＋滿足感受），可分為功能、情感、改變生活、社會影響四個層次。"
+    first_week: 1
+
+  # Week 2: 價值框架
+  - id: harvard_value
+    zh: 哈佛4層次價值框架
+    en: Harvard Four Levels of Value
+    definition: "由哈佛商學院提出的價值分析框架：功能性價值→情感性價值→改變生活的價值→社會影響力價值，層次越高越難被競爭者複製。"
+    first_week: 2
+
+  - id: functional_value
+    zh: 功能性價值
+    en: Functional Value
+    definition: "產品或服務的基本、實用性利益，如省時、省錢、降低風險。是哈佛框架的第一層次。"
+    first_week: 2
+
+  - id: emotional_value
+    zh: 情感性價值
+    en: Emotional Value
+    definition: "產品或服務帶給顧客的感受與情緒體驗，如安全感、成就感、歸屬感。是哈佛框架的第二層次。"
+    first_week: 2
+
+  - id: value_proposition_statement
+    zh: 價值陳述
+    en: Value Proposition Statement
+    definition: "清楚說明企業為目標客群提供何種獨特價值的簡短聲明，整合了價值需求、價值要素與傳遞方式。"
+    first_week: 2
+
+  # Week 3: 行銷SOP
+  - id: marketing_sop
+    zh: 行銷SOP
+    en: Marketing SOP
+    definition: "行銷標準作業程序：經營宗旨→SWOT環境分析→STP市場選擇→行銷組合(4/7P)→行銷計劃→執行→考核，為完整的行銷策略規劃流程。"
+    first_week: 3
+
+  - id: swot
+    zh: SWOT分析
+    en: SWOT Analysis
+    definition: "評估企業內部優勢（Strengths）、劣勢（Weaknesses）與外部機會（Opportunities）、威脅（Threats）的策略分析工具。"
+    first_week: 3
+
+  - id: pest
+    zh: PEST分析
+    en: PEST Analysis
+    definition: "分析企業所處宏觀環境的工具，包含政治（Political）、經濟（Economic）、社會（Social）、技術（Technology）四個面向。"
+    first_week: 3
+
+  # Week 4: 市場區隔
+  - id: segmentation
+    zh: 市場區隔
+    en: Market Segmentation
+    definition: "將整體市場依據消費者的不同需求、特徵或行為，切割成數個具有同質性的次市場（蛋糕比喻：整塊蛋糕→切成好多塊）。"
+    first_week: 4
+
+  - id: demographics
+    zh: 人口統計變數
+    en: Demographics
+    definition: "以年齡、性別、收入、職業、教育程度等客觀特徵進行市場區隔的方法，是最常用的區隔維度。"
+    first_week: 4
+
+  - id: psychographics
+    zh: 心理特性區隔
+    en: Psychographics
+    definition: "以消費者的社會階級、個性、生活方式、價值觀等心理因素進行市場區隔。"
+    first_week: 4
+
+  - id: behavioral_seg
+    zh: 行為特性區隔
+    en: Behavioral Segmentation
+    definition: "以消費者的使用情況、忠誠度、對產品態度、追求的利益等行為特徵進行市場區隔。"
+    first_week: 4
+
+  # Week 5: 目標市場
+  - id: targeting
+    zh: 目標市場選擇
+    en: Targeting
+    definition: "在完成市場區隔後，評估並選擇企業最具競爭優勢的一個或多個市場區隔作為服務對象（蛋糕比喻：選擇要吃哪塊）。"
+    first_week: 5
+
+  - id: focus_strategy
+    zh: 聚焦策略
+    en: Focus Strategy
+    definition: "企業集中資源深耕單一目標市場區隔，以獲得在該細分市場的競爭優勢，適合資源有限的中小型企業。"
+    first_week: 5
+
+  # Week 6: 品牌定位
+  - id: positioning
+    zh: 品牌定位
+    en: Positioning
+    definition: "在目標消費者心中，建立關於品牌或產品的獨特、差異化形象與認知地位的策略行動（蛋糕比喻：吃下這塊蛋糕）。"
+    first_week: 6
+
+  - id: perceptual_map
+    zh: 知覺定位圖
+    en: Perceptual Map
+    definition: "以二維座標圖呈現消費者對各品牌的知覺位置，橫縱軸選取兩個關鍵屬性，用於分析競爭格局與找尋定位機會。"
+    first_week: 6
+
+  - id: positioning_statement
+    zh: 定位聲明
+    en: Positioning Statement
+    definition: "簡短說明品牌為何目標客群、提供何種獨特利益的聲明，通常格式為：「對於___（目標客群），___（品牌）是___（參考框架）中最___的（關鍵差異），因為___（支持理由）。」"
+    first_week: 6
+
+  # Week 7: AISAS
+  - id: aidma
+    zh: AIDMA
+    en: AIDMA
+    definition: "傳統消費者行為模型：Attention（注目）→ Interest（興趣）→ Desire（欲求）→ Memory（記憶）→ Action（購買），適用於大眾媒體傳播時代。"
+    first_week: 7
+
+  - id: aisas
+    zh: AISAS
+    en: AISAS
+    definition: "數位時代消費者行為模型（電通提出）：Attention（注目）→ Interest（興趣）→ Search（搜索）→ Action（購買）→ Share（分享），Search與Share形成循環的病毒傳播效應。"
+    first_week: 7
+
+  - id: wom
+    zh: 口碑行銷
+    en: Word-of-Mouth Marketing
+    definition: "透過消費者之間的自然分享與推薦來傳播品牌資訊，是AISAS中Share環節的核心機制，成本低但信任度極高。"
+    first_week: 7
+
+  # Week 8: 人物誌
+  - id: persona
+    zh: 人物誌
+    en: Persona
+    definition: "基於真實研究資料創建的虛構目標客戶代表，包含姓名、基本資料、媒體習慣、使用行為和煩惱痛點，幫助團隊建立共同的客戶圖像。"
+    first_week: 8
+
+  - id: pain_point
+    zh: 痛點
+    en: Pain Point
+    definition: "消費者在完成某項任務或滿足某項需求時遭遇的障礙、不便或負面情緒，是產品或服務創新的重要切入口。"
+    first_week: 8
+
+  # Week 9: 同理心地圖
+  - id: empathy_map
+    zh: 同理心地圖
+    en: Empathy Map
+    definition: "由XPLANE公司發明的視覺化工具，從6個維度描繪目標用戶的全貌：想法和感受、聽到什麼、看到什麼、說和作、痛苦、獲得。"
+    first_week: 9
+
+  # Week 10: 價值主張畫布
+  - id: vpc
+    zh: 價值主張畫布
+    en: Value Proposition Canvas
+    definition: "由Strategyzer開發的工具，左側為「價值主張」（產品服務/創造獲益/痛點解決），右側為「顧客描述」（任務/獲益/痛點），用於確保產品與市場契合。"
+    first_week: 10
+
+  - id: customer_jobs
+    zh: 顧客任務
+    en: Customer Jobs
+    definition: "顧客在生活或工作中試圖完成的任務、解決的問題或滿足的需求，是價值主張畫布顧客描述的核心元素。"
+    first_week: 10
+
+  # Week 11: 產品策略
+  - id: financial_product
+    zh: 金融商品
+    en: Financial Product
+    definition: "金融機構提供的各類產品或服務，包含存款、貸款、保險、基金、ETF、股票等，具有無形性、不可分割性等服務特性。"
+    first_week: 11
+
+  - id: etf
+    zh: ETF（指數股票型基金）
+    en: Exchange Traded Fund
+    definition: "在交易所掛牌交易、追蹤特定指數的基金，結合股票的交易靈活性與共同基金的分散投資優點，是近年台灣理財市場的熱門商品。"
+    first_week: 11
+
+  # Week 12: 定價策略
+  - id: value_pricing
+    zh: 價值基礎定價
+    en: Value-Based Pricing
+    definition: "以顧客對產品或服務所感知的價值為基礎來設定價格，而非以成本加成或競爭對手定價為準，是最能實現利潤最大化的定價策略。"
+    first_week: 12
+
+  - id: management_fee
+    zh: 管理費（費率）
+    en: Management Fee
+    definition: "基金公司收取的年費，以資產淨值的百分比計算，是投資人選擇金融商品的重要考量因素，也是金融品牌定價競爭的主要戰場。"
+    first_week: 12
+
+  # Week 13: 通路策略
+  - id: omo
+    zh: OMO（線上線下融合）
+    en: Online Merge Offline
+    definition: "整合線上數位通路與線下實體通路，為顧客提供無縫的跨通路購物與服務體驗，是當代全通路行銷策略的核心概念。"
+    first_week: 13
+
+  - id: fintech
+    zh: 金融科技
+    en: FinTech
+    definition: "Financial Technology的縮寫，指以科技創新改善金融服務的產業，包含行動支付、P2P借貸、機器人理財、區塊鏈等應用。"
+    first_week: 13
+
+  # Week 14: IMC
+  - id: imc
+    zh: 整合行銷傳播
+    en: Integrated Marketing Communications
+    definition: "協調並整合廣告、公關、社群媒體、直效行銷等多種傳播工具，確保所有管道傳遞一致的品牌聲音與訊息。"
+    first_week: 14
+
+  - id: kol
+    zh: KOL（關鍵意見領袖）
+    en: Key Opinion Leader
+    definition: "在特定領域擁有大量忠實追蹤者的網路名人或意見領袖，透過內容創作影響粉絲的消費決策，是數位時代的重要行銷管道。"
+    first_week: 14
+
+  - id: content_marketing
+    zh: 內容行銷
+    en: Content Marketing
+    definition: "透過持續產出對目標受眾有價值的內容（文章、影片、Podcast等）來吸引並留住客戶，金融業常以財商教育內容為核心。"
+    first_week: 14
+
+  # Week 15: 顧客旅程
+  - id: customer_journey
+    zh: 客戶旅程地圖
+    en: Customer Journey Map
+    definition: "視覺化描繪顧客與品牌所有接觸點的地圖，呈現顧客從認知到購後的完整體驗流程，用於識別體驗斷點與改善機會。"
+    first_week: 15
+
+  - id: nps
+    zh: NPS（淨推薦值）
+    en: Net Promoter Score
+    definition: "衡量顧客忠誠度的指標，詢問顧客「有多大可能向他人推薦我們」（0-10分），推薦者比例扣除批評者比例即為NPS。"
+    first_week: 15
+
+  # Week 16: 行銷計畫
+  - id: marketing_plan
+    zh: 行銷計畫書
+    en: Marketing Plan
+    definition: "整合市場分析、STP策略、行銷組合、預算規劃與績效指標的完整文件，是企業行銷活動的藍圖與執行指南。"
+    first_week: 16
+
+  - id: kpi
+    zh: KPI（關鍵績效指標）
+    en: Key Performance Indicator
+    definition: "衡量企業或行銷活動達成目標程度的量化指標，如月活躍用戶數（MAU）、顧客獲取成本（CAC）、留存率（Retention Rate）等。"
+    first_week: 16
+
+  - id: roi
+    zh: ROI（投資報酬率）
+    en: Return on Investment
+    definition: "行銷投入所獲得的財務回報比例，計算公式為：(收益－投入成本) / 投入成本 × 100%，是評估行銷效益的重要指標。"
+    first_week: 16
