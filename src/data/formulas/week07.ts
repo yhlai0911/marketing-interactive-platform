@@ -2,35 +2,26 @@ import type { FormulaItem } from "@/components/visuals/FormulaQuickRef";
 
 export const week07Formulas: FormulaItem[] = [
   {
-    name: "6 個月遠期匯率 CIP",
-    formula: "F(6m) = S₀ × {1 + i_d × 6/12}/{1 + i_f × 6/12}",
-    description: "用拋補利率平價計算 6 個月期的遠期匯率。分子分母分別乘以期間比例（6/12）。",
+    name: "AIDMA 消費者行為模型",
+    formula: "Attention → Interest → Desire → Memory → Action",
+    description: "源自 E. St. Elmo Lewis (1898) 的 AIDA 模型，由 Samuel Roland Hall 於 1920 年代加入 Memory 階段形成的傳統消費者行為五階段模型。資訊流為單向（企業→消費者），消費者是被動接收者。適用於大眾媒體主導的傳統行銷場景。",
+    example: "銀行電視廣告（A）→ 漂亮理財手冊引發興趣（I）→ 業務員創造購買慾望（D）→ 留名片記住品牌（M）→ 到分行簽約（A）",
   },
   {
-    name: "遠期避險收入",
-    formula: "遠期收入 = 外幣金額 × F",
-    description: "用遠期合約鎖定匯率，不論未來匯率如何變動，都以 F 換匯。確定性高，但放棄了匯率有利變動的好處。",
+    name: "AISAS 消費者行為模型",
+    formula: "Attention → Interest → Search → Action → Share（循環）",
+    description: "2004 年由日本電通（Dentsu）提出的數位時代消費者行為模型。核心差異：Search 取代 Desire + Memory（消費者主動搜尋），Share 是全新階段（購買後社群分享），形成雙向循環。",
+    example: "朋友 IG 分享（A）→ 覺得有趣（I）→ Google 搜尋評價（S）→ 下載 App（A）→ IG 分享理財心得（S）→ 觸發新循環",
   },
   {
-    name: "選擇權避險（日圓賣權）",
-    formula: "S_T < K → 有效匯率 = K - c ; S_T >= K → 有效匯率 = S_T - c",
-    description: "K = 履約價，c = 權利金。最低有效匯率（下限）= K - c。保底又保彈性，但需付權利金。",
-    example: "K = 0.230, c = 0.004 → 最低有效匯率 = 0.226",
+    name: "Search & Share 循環四特性",
+    formula: "自發性 + 可信度高 + 成本低 + 指數成長",
+    description: "AISAS 的核心引擎。(1) 自發性——消費者出於興趣搜尋和分享。(2) 可信度高——約 83% 信任親友推薦（Nielsen 2015）。(3) 成本低——企業做好產品，分享由消費者完成。(4) 指數成長——每次分享觸發多個新搜尋者。",
+    example: "富誠的 90% 推薦數據 = Share 引擎已啟動。策略不是「買更多廣告」，而是優化分享動機和搜尋結果。",
   },
   {
-    name: "權利金總額",
-    formula: "權利金 = 名目金額 × c",
-    description: "選擇權的「保險費」，無論是否行使都要支付。是選擇權避險的主要成本。",
-    example: "避險 5,000 萬日圓, c = 0.004 → 權利金 = 5,000 萬 × 0.004 = 20 萬 TWD",
-  },
-  {
-    name: "利率交換 IRS 淨效果",
-    formula: "(TORF + spread) - TORF + swap rate = swap rate + spread",
-    description: "貸款付 TORF + spread，IRS 收 TORF、付固定 swap rate。淨效果：浮動利率轉為固定利率。",
-  },
-  {
-    name: "三種盾牌比較",
-    formula: "遠期：鎖定 | 選擇權：保底+彈性 | 不避險：全賭市場",
-    description: "遠期：確定性高，上下都鎖，零現金成本。選擇權：保底保彈性，付權利金。不避險：零成本，承擔全部市場風險。",
+    name: "AIDMA vs AISAS 選擇原則",
+    formula: "不是哪個模型更好，而是目標客群怎麼做決策",
+    description: "25-35 歲年輕上班族 → 標準 AISAS 消費者。65 歲退休族群 → AIDMA 可能更適合。同一個人在不同產品上可能用不同模型。模型是工具，不是信仰。",
   },
 ];
