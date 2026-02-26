@@ -87,6 +87,10 @@ const EmpathyMapSixPanel = dynamic(() => import("./EmpathyMapSixPanel"), { ssr: 
 const EmpathyMapVsPersona = dynamic(() => import("./EmpathyMapVsPersona"), { ssr: false });
 const EmpathyToStrategy = dynamic(() => import("./EmpathyToStrategy"), { ssr: false });
 
+// Week 10: 痛點轉商機——價值主張畫布（VPC）
+const VPCCanvas = dynamic(() => import("./VPCCanvas"), { ssr: false });
+const FitDashboard = dynamic(() => import("./FitDashboard"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -165,4 +169,7 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   EmpathyMapSixPanel,
   EmpathyMapVsPersona,
   EmpathyToStrategy,
+  // Week 10
+  VPCCanvas,
+  FitDashboard,
 };
