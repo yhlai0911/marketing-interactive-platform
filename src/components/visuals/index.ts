@@ -106,6 +106,11 @@ const ChannelEvalFramework = dynamic(() => import("./ChannelEvalFramework"), { s
 const ChannelEvolutionDiagram = dynamic(() => import("./ChannelEvolutionDiagram"), { ssr: false });
 const OMOChannelMap = dynamic(() => import("./OMOChannelMap"), { ssr: false });
 
+// Week 14: 整合行銷傳播（IMC）
+const PESOMediaMap = dynamic(() => import("./PESOMediaMap"), { ssr: false });
+const IMCSixToolsRadar = dynamic(() => import("./IMCSixToolsRadar"), { ssr: false });
+const ComplianceCreativity = dynamic(() => import("./ComplianceCreativity"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -199,4 +204,8 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   ChannelEvalFramework,
   ChannelEvolutionDiagram,
   OMOChannelMap,
+  // Week 14
+  PESOMediaMap,
+  IMCSixToolsRadar,
+  ComplianceCreativity,
 };
