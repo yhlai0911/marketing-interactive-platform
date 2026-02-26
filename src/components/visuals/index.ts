@@ -101,6 +101,11 @@ const FeeStructureCompare = dynamic(() => import("./FeeStructureCompare"), { ssr
 const PsychologicalPricingEffects = dynamic(() => import("./PsychologicalPricingEffects"), { ssr: false });
 const PricingStrategyCompare = dynamic(() => import("./PricingStrategyCompare"), { ssr: false });
 
+// Week 13: 觸達客戶——金融通路策略
+const ChannelEvalFramework = dynamic(() => import("./ChannelEvalFramework"), { ssr: false });
+const ChannelEvolutionDiagram = dynamic(() => import("./ChannelEvolutionDiagram"), { ssr: false });
+const OMOChannelMap = dynamic(() => import("./OMOChannelMap"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -190,4 +195,8 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   FeeStructureCompare,
   PsychologicalPricingEffects,
   PricingStrategyCompare,
+  // Week 13
+  ChannelEvalFramework,
+  ChannelEvolutionDiagram,
+  OMOChannelMap,
 };
