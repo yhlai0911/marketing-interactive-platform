@@ -111,6 +111,11 @@ const PESOMediaMap = dynamic(() => import("./PESOMediaMap"), { ssr: false });
 const IMCSixToolsRadar = dynamic(() => import("./IMCSixToolsRadar"), { ssr: false });
 const ComplianceCreativity = dynamic(() => import("./ComplianceCreativity"), { ssr: false });
 
+// Week 15: 打造體驗——金融服務顧客旅程
+const CustomerJourneyStageFlow = dynamic(() => import("./CustomerJourneyStageFlow"), { ssr: false });
+const SERVQUALRadar = dynamic(() => import("./SERVQUALRadar"), { ssr: false });
+const CESCalculator = dynamic(() => import("./CESCalculator"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -208,4 +213,8 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   PESOMediaMap,
   IMCSixToolsRadar,
   ComplianceCreativity,
+  // Week 15
+  CustomerJourneyStageFlow,
+  SERVQUALRadar,
+  CESCalculator,
 };
