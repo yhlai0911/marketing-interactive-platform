@@ -22,7 +22,7 @@ const episodes = [
   { week: 13, title: "觸達客戶：金融通路策略", topics: ["OMO", "通路設計"], available: true },
   { week: 14, title: "讓人記住你：整合行銷傳播", topics: ["IMC", "品牌傳播"], available: true },
   { week: 15, title: "打造體驗：金融服務顧客旅程", topics: ["顧客旅程", "服務設計"], available: true },
-  { week: 16, title: "整合行銷計畫：富誠的下一步", topics: ["行銷計畫書", "總複習"], available: false },
+  { week: 16, title: "整合行銷計畫：富誠的下一步", topics: ["行銷計畫書", "總複習"], available: true },
 ];
 
 const characters = [
