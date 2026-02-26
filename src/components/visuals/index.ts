@@ -91,6 +91,11 @@ const EmpathyToStrategy = dynamic(() => import("./EmpathyToStrategy"), { ssr: fa
 const VPCCanvas = dynamic(() => import("./VPCCanvas"), { ssr: false });
 const FitDashboard = dynamic(() => import("./FitDashboard"), { ssr: false });
 
+// Week 11: 產品策略——從核心利益到品牌決策
+const ProductThreeLevels = dynamic(() => import("./ProductThreeLevels"), { ssr: false });
+const BrandStrategyCompare = dynamic(() => import("./BrandStrategyCompare"), { ssr: false });
+const SevenPDashboard = dynamic(() => import("./SevenPDashboard"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -172,4 +177,8 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   // Week 10
   VPCCanvas,
   FitDashboard,
+  // Week 11
+  ProductThreeLevels,
+  BrandStrategyCompare,
+  SevenPDashboard,
 };

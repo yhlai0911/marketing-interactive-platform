@@ -17,7 +17,7 @@ const episodes = [
   { week: 8, title: "走進客戶的世界：人物誌", topics: ["Persona", "用戶研究"], available: true },
   { week: 9, title: "走進客戶的心：同理心地圖", topics: ["Empathy Map", "深度洞察"], available: true },
   { week: 10, title: "痛點轉商機：價值主張畫布", topics: ["VPC", "價值配適"], available: true },
-  { week: 11, title: "設計商品：金融產品策略", topics: ["產品組合", "產品生命週期"], available: false },
+  { week: 11, title: "設計商品：金融產品策略", topics: ["產品組合", "產品生命週期"], available: true },
   { week: 12, title: "定價的藝術：金融商品定價", topics: ["定價策略", "心理定價"], available: false },
   { week: 13, title: "觸達客戶：金融通路策略", topics: ["OMO", "通路設計"], available: false },
   { week: 14, title: "讓人記住你：整合行銷傳播", topics: ["IMC", "品牌傳播"], available: false },
