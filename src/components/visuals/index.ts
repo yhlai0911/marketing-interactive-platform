@@ -96,6 +96,11 @@ const ProductThreeLevels = dynamic(() => import("./ProductThreeLevels"), { ssr: 
 const BrandStrategyCompare = dynamic(() => import("./BrandStrategyCompare"), { ssr: false });
 const SevenPDashboard = dynamic(() => import("./SevenPDashboard"), { ssr: false });
 
+// Week 12: 定價的藝術——金融商品定價策略
+const FeeStructureCompare = dynamic(() => import("./FeeStructureCompare"), { ssr: false });
+const PsychologicalPricingEffects = dynamic(() => import("./PsychologicalPricingEffects"), { ssr: false });
+const PricingStrategyCompare = dynamic(() => import("./PricingStrategyCompare"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -181,4 +186,8 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   ProductThreeLevels,
   BrandStrategyCompare,
   SevenPDashboard,
+  // Week 12
+  FeeStructureCompare,
+  PsychologicalPricingEffects,
+  PricingStrategyCompare,
 };
