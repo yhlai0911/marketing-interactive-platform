@@ -116,6 +116,11 @@ const CustomerJourneyStageFlow = dynamic(() => import("./CustomerJourneyStageFlo
 const SERVQUALRadar = dynamic(() => import("./SERVQUALRadar"), { ssr: false });
 const CESCalculator = dynamic(() => import("./CESCalculator"), { ssr: false });
 
+// Week 16: 整合行銷計畫——富誠的下一步
+const MarketingPlanOverview = dynamic(() => import("./MarketingPlanOverview"), { ssr: false });
+const SevenPStrategyTable = dynamic(() => import("./SevenPStrategyTable"), { ssr: false });
+const WeeklyIntegrationMap = dynamic(() => import("./WeeklyIntegrationMap"), { ssr: false });
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   SixMotivesChart,
@@ -217,4 +222,8 @@ export const VISUAL_COMPONENTS: Record<string, ComponentType<any>> = {
   CustomerJourneyStageFlow,
   SERVQUALRadar,
   CESCalculator,
+  // Week 16
+  MarketingPlanOverview,
+  SevenPStrategyTable,
+  WeeklyIntegrationMap,
 };

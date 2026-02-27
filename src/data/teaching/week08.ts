@@ -97,7 +97,7 @@ export const week08Teaching: SegmentTeaching[] = [
       },
       {
         type: 'visual',
-        component: 'W08FourToolsOverview',
+        component: 'W08FourToolsProgression',
         caption: '瞭解客戶的四種工具——層層遞進關係',
       },
       {
