@@ -25,6 +25,13 @@ const navItems = [
   { href: "/classroom", label: "課堂模式", icon: Presentation },
 ];
 
+const UMAMI_SCRIPT_URL =
+  process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL ??
+  "https://ivan-umami.zeabur.app/stats.js";
+const UMAMI_WEBSITE_ID =
+  process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ??
+  "4072002e-4b64-4a83-92c3-cca2ffa3da71";
+
 export default function RootLayout({
   children,
 }: {
@@ -40,6 +47,9 @@ export default function RootLayout({
           name="description"
           content="金融商品行銷實務 PBL 互動式多媒體教學平台"
         />
+        {UMAMI_SCRIPT_URL && UMAMI_WEBSITE_ID ? (
+          <script defer src={UMAMI_SCRIPT_URL} data-website-id={UMAMI_WEBSITE_ID} />
+        ) : null}
       </head>
       <body
         className={`${notoSans.variable} ${notoSerif.variable} font-sans antialiased min-h-screen flex flex-col`}
