@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { guardAiRequest } from "@/lib/ai-guard";
 import { synthesize } from "@/lib/tts-engine";
 import type { CharacterId } from "@/types";
 
 export async function POST(request: NextRequest) {
+  const blocked = await guardAiRequest(request, "tts");
+  if (blocked) return blocked;
+
   try {
     const { text, character } = (await request.json()) as {
       text: string;

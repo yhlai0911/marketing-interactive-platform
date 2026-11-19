@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import { guardAiRequest } from "@/lib/ai-guard";
 import { createChatStream } from "@/lib/openai-chat";
 import { loadEpisodes, loadGlossary } from "@/lib/content";
 import type { ChatMessage } from "@/types";
 
 export async function POST(request: NextRequest) {
+  const blocked = await guardAiRequest(request, "chat");
+  if (blocked) return blocked;
+
   try {
     const { messages, week } = (await request.json()) as {
       messages: ChatMessage[];

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { guardAiRequest } from "@/lib/ai-guard";
 import { createChatStream } from '@/lib/openai-chat';
 import { loadGlossary } from '@/lib/content';
 import type { ChatMessage } from '@/types';
@@ -13,6 +14,9 @@ const SCOPE_LIMIT_PROMPT = `你現在是「課程頁面 AI 助教」模式，嵌
 - 不要重複學生已經知道的內容，直接回答問題核心`;
 
 export async function POST(request: NextRequest) {
+  const blocked = await guardAiRequest(request, "lesson-chat");
+  if (blocked) return blocked;
+
   try {
     const { messages, weekNum, lessonContext } = (await request.json()) as {
       messages: ChatMessage[];
